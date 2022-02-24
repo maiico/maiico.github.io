@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/puffalytics/static/css/main.719b340d.css",
-    "main.js": "/puffalytics/static/js/main.f1c7a71f.js",
-    "static/media/nac.png": "/puffalytics/static/media/nac.67b0f348237be48272b9.png",
-    "static/media/truccos-avatar.png": "/puffalytics/static/media/truccos-avatar.2b2b7e8c466b77a9b2f2.png",
-    "static/media/sac.png": "/puffalytics/static/media/sac.46ef38d6c1e947224f1f.png",
-    "static/media/puff-logo.jpeg": "/puffalytics/static/media/puff-logo.c824e59348e033aa0986.jpeg",
-    "static/media/puffalytics-logo.png": "/puffalytics/static/media/puffalytics-logo.4166c795cafcc2e5fa29.png",
-    "index.html": "/puffalytics/index.html",
-    "main.719b340d.css.map": "/puffalytics/static/css/main.719b340d.css.map",
-    "main.f1c7a71f.js.map": "/puffalytics/static/js/main.f1c7a71f.js.map"
+    "main.css": "/static/css/main.719b340d.css",
+    "main.js": "/static/js/main.2650c2ed.js",
+    "static/media/nac.png": "/static/media/nac.67b0f348237be48272b9.png",
+    "static/media/truccos-avatar.png": "/static/media/truccos-avatar.2b2b7e8c466b77a9b2f2.png",
+    "static/media/sac.png": "/static/media/sac.46ef38d6c1e947224f1f.png",
+    "static/media/puff-logo.jpeg": "/static/media/puff-logo.c824e59348e033aa0986.jpeg",
+    "static/media/puffalytics-logo.png": "/static/media/puffalytics-logo.4166c795cafcc2e5fa29.png",
+    "index.html": "/index.html",
+    "main.719b340d.css.map": "/static/css/main.719b340d.css.map",
+    "main.2650c2ed.js.map": "/static/js/main.2650c2ed.js.map"
   },
   "entrypoints": [
     "static/css/main.719b340d.css",
-    "static/js/main.f1c7a71f.js"
+    "static/js/main.2650c2ed.js"
   ]
 }
