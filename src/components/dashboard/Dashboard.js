@@ -45,12 +45,12 @@ function Dashboard() {
         const fetchFloorPrices = async () => {
             try {
                 let res = await axios.get(config.apis.magicEden.sac)
-                setSacFloorPrice(res.data.results.floorPrice)
-                setSacTotalListed(res.data.results.listedCount)
+                setSacFloorPrice(res.data.floorPrice)
+                setSacTotalListed(res.data.listedCount)
 
                 res = await axios.get(config.apis.magicEden.nac)
-                setNacFloorPrice(res.data.results.floorPrice)
-                setNacTotalListed(res.data.results.listedCount)
+                setNacFloorPrice(res.data.floorPrice)
+                setNacTotalListed(res.data.listedCount)
 
             } catch(err) {
                 console.log(err)
