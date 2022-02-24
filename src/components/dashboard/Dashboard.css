@@ -1,0 +1,48 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.dashboard-row {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-col {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-txt {
+  color: #ffffff;
+  margin: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard {
+    margin-top: 5rem;
+  }
+
+  .dashboard-row {
+    flex-direction: column;
+  }
+
+  .dashboard-col {
+    width: 100%;
+  }
+}

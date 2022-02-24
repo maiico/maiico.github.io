@@ -1,0 +1,113 @@
+.owned-apes {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+  padding: 1.5rem;
+  text-align: left;
+  border-style: solid;
+  border-color: #14f195;
+  border-width: 2px;
+  margin: 0.5rem;
+}
+
+.owned-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.owned-collection-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  justify-content: left;
+  text-align: left;
+  align-items: left;
+}
+
+.role-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 95%;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #333333;
+}
+
+.owned-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.owned-input-btn {
+  height: 25px;
+  width: 25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  border-style: none;
+  margin: 1rem;
+  color: #dddddd;
+  font-weight: bold;
+  background-color: #9945ff;
+  cursor: pointer;
+}
+
+.owned-apes-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.calculate-btn {
+  height: 35px;
+  width: 160px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-style: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #9945ff 0%, #14f195 100%);
+  color: #ffffff;
+  font-weight: bold;
+  margin: auto;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .owned-apes {
+    width: 85%;
+  }
+
+  .owned-content-wrapper {
+    flex-direction: column;
+  }
+
+  .owned-apes-btn-wrapper {
+    flex-direction: column;
+  }
+
+  .calculate-btn {
+    margin-bottom: 1rem;
+  }
+}

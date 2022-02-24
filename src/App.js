@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Dashboard from './components/dashboard/Dashboard';
+import Nav from './components/nav/Nav';
+import BackDrop from './components/backDrop/BackDrop';
+import Info from './components/info/Info';
 
 function App() {
+
+  //backdrop
+  const [showBackDrop, setShowBackDrop] = useState(false)
+
+  //info
+  const [showInfo, setShowInfo] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Nav setShowBackDrop={setShowBackDrop} setShowInfo={setShowInfo}/>
+        <Dashboard />
+        {showBackDrop ? <BackDrop setShowBackDrop={setShowBackDrop} setShowInfo={setShowInfo}/> : null}
+        {showInfo ? <Info setShowInfo={setShowInfo} setShowBackDrop={setShowBackDrop}/> : null}
     </div>
   );
 }

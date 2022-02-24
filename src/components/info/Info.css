@@ -1,0 +1,159 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: auto;
+  max-width: 600px;
+  margin: auto;
+  background: #000000;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: #14f195;
+  padding: 1rem;
+}
+
+.info-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: auto;
+  width: 100%;
+}
+
+.team-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  align-items: top;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.info-heading {
+  font-size: 1.25rem;
+  background: -webkit-linear-gradient(left, #9945ff, #14f195);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.name-heading {
+  font-size: 1.25rem;
+  color: #dddddd;
+  margin: auto;
+}
+
+.info-txt {
+  color: #dddddd;
+  font-size: 1rem;
+}
+
+.team-avatar {
+  height: auto;
+  width: 8rem;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.twitter-icon {
+  color: #1da1f2;
+  margin: auto;
+  padding: 2rem;
+}
+
+.built-by-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 50%;
+}
+
+.support-project-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 50%;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.wallet-copy-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+
+.wallet-address-wrapper {
+  display: block;
+  height: auto;
+  width: 250px;
+  background-color: #242526;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fafafafa;
+  font-size: 1rem;
+  padding: 1px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  margin-right: 5px;
+}
+
+.copy-btn {
+  background-color: #242526;
+  border-style: none;
+  border-radius: 1px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.copy-icon {
+  color: #ffffff;
+}
+
+.info-close-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  border-style: none;
+  background-color: #9945ff;
+  color: #ffffff;
+  border-radius: 50%;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .info {
+    width: 85%;
+  }
+
+  .team-wrapper {
+    flex-direction: column;
+  }
+
+  .built-by-wrapper {
+    width: 100%;
+  }
+
+  .support-project-wrapper {
+    width: 100%;
+  }
+}

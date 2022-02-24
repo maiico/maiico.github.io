@@ -1,0 +1,61 @@
+.rescue-missions {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+  padding: 1.5rem;
+  text-align: left;
+  border-style: solid;
+  border-color: #14f195;
+  border-width: 2px;
+  margin: 0.5rem;
+}
+
+.mission-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 2.5rem;
+  width: 100%;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #333333;
+}
+
+.mission-cost-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 10%;
+  text-align: left;
+  justify-content: left;
+}
+
+.mission-value-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 16%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-pl-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 10%;
+  text-align: right;
+  justify-content: right;
+}
+
+@media screen and (max-width: 480px) {
+  .rescue-missions {
+    display: none;
+  }
+}

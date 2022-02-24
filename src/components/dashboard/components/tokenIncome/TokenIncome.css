@@ -1,0 +1,68 @@
+.token-income {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 85%;
+  background-color: #000000;
+  border-radius: 25px;
+  padding: 1.5rem;
+  text-align: left;
+  border-style: solid;
+  border-color: #14f195;
+  border-width: 2px;
+  margin: 0.5rem;
+}
+
+.token-income-heading {
+  font-size: 1.25rem;
+  background: -webkit-linear-gradient(left, #9945ff, #14f195);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.token-income-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 2.5rem;
+  width: 100%;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #333333;
+}
+
+.token-day-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 33%;
+  text-align: left;
+  justify-content: left;
+}
+
+.token-amount-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 33%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.token-value-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 33%;
+  text-align: right;
+  justify-content: right;
+}
+
+@media screen and (max-width: 480px) {
+  .token-income {
+    width: 85%;
+  }
+}

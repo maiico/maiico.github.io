@@ -1,0 +1,22 @@
+{
+    "apis": {
+        "coinGecko": {
+            "url": "https://api.coingecko.com/api/v3/simple/price?ids=solana%2Cpuff&vs_currencies=usd%2Ccad"
+        },
+        "magicEden": {
+            "sac": "https://api-mainnet.magiceden.io/rpc/getCollectionEscrowStats/stoned_ape_crew",
+            "nac": "https://api-mainnet.magiceden.io/rpc/getCollectionEscrowStats/nuked_apes"
+        }
+    },
+    "tokenIncome": {
+        "puff": {
+            "day": 300,
+            "week": 2100,
+            "month": 9000,
+            "year": 109500    
+    }
+    },
+    "rescueMissions": {
+        "cost": 3358
+    }
+}
