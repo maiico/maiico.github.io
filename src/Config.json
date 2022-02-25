@@ -4,8 +4,8 @@
             "url": "https://api.coingecko.com/api/v3/simple/price?ids=solana%2Cpuff&vs_currencies=usd%2Ccad"
         },
         "magicEden": {
-            "sac": "https://api-mainnet.magiceden.dev/v2/collections/stoned_ape_crew/stats",
-            "nac": "https://api-mainnet.magiceden.dev/v2/collections/nuked_apes/stats"
+            "sac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getsacfloorprice",
+            "nac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getnacfloorprice"
         }
     },
     "tokenIncome": {
