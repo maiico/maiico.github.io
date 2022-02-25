@@ -44,11 +44,16 @@ function Dashboard() {
         //fetch floor prices
         const fetchFloorPrices = async () => {
             try {
-                let res = await axios.get(config.apis.magicEden.sac)
+
+                const headers = {
+                    "Access-Control-Allow-Origin" : "*"
+                }
+
+                let res = await axios.get(config.apis.magicEden.sac, headers)
                 setSacFloorPrice(res.data.floorPrice)
                 setSacTotalListed(res.data.listedCount)
 
-                res = await axios.get(config.apis.magicEden.nac)
+                res = await axios.get(config.apis.magicEden.nac, headers)
                 setNacFloorPrice(res.data.floorPrice)
                 setNacTotalListed(res.data.listedCount)
 
