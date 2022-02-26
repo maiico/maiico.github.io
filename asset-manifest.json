@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.719b340d.css",
-    "main.js": "/static/js/main.0c898607.js",
+    "main.css": "/static/css/main.db2cdab3.css",
+    "main.js": "/static/js/main.3aa509ac.js",
     "static/media/nac.png": "/static/media/nac.67b0f348237be48272b9.png",
     "static/media/truccos-avatar.png": "/static/media/truccos-avatar.2b2b7e8c466b77a9b2f2.png",
     "static/media/sac.png": "/static/media/sac.46ef38d6c1e947224f1f.png",
     "static/media/puff-logo.jpeg": "/static/media/puff-logo.c824e59348e033aa0986.jpeg",
     "static/media/puffalytics-logo.png": "/static/media/puffalytics-logo.4166c795cafcc2e5fa29.png",
     "index.html": "/index.html",
-    "main.719b340d.css.map": "/static/css/main.719b340d.css.map",
-    "main.0c898607.js.map": "/static/js/main.0c898607.js.map"
+    "main.db2cdab3.css.map": "/static/css/main.db2cdab3.css.map",
+    "main.3aa509ac.js.map": "/static/js/main.3aa509ac.js.map"
   },
   "entrypoints": [
-    "static/css/main.719b340d.css",
-    "static/js/main.0c898607.js"
+    "static/css/main.db2cdab3.css",
+    "static/js/main.3aa509ac.js"
   ]
 }
