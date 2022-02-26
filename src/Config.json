@@ -8,15 +8,7 @@
             "nac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getnacfloorprice"
         }
     },
-    "tokenIncome": {
-        "puff": {
-            "day": 300,
-            "week": 2100,
-            "month": 9000,
-            "year": 109500    
-    }
-    },
     "rescueMissions": {
-        "cost": 3358
+        "cost": 3958
     }
 }

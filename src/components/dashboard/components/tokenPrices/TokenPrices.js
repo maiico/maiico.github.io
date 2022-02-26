@@ -21,7 +21,7 @@ function TokenPrices(props) {
                         <img src={Puff} className="token-logo" alt="solana"/>
                         <p className="token-prices-txt">Puff</p>
                     </div>
-                    <p className="token-prices-txt">${props.puffPriceUsd.toFixed(2)}&nbsp;{fiatCurrency}</p>
+                    <p className="token-prices-txt">${props.puffPriceUsd.toFixed(6)}&nbsp;{fiatCurrency}</p>
                 </div>
         </div>
     );

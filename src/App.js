@@ -4,6 +4,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import Nav from './components/nav/Nav';
 import BackDrop from './components/backDrop/BackDrop';
 import Info from './components/info/Info';
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Dashboard />
         {showBackDrop ? <BackDrop setShowBackDrop={setShowBackDrop} setShowInfo={setShowInfo}/> : null}
         {showInfo ? <Info setShowInfo={setShowInfo} setShowBackDrop={setShowBackDrop}/> : null}
+        <Footer setShowBackDrop={setShowBackDrop} setShowInfo={setShowInfo} />
     </div>
   );
 }

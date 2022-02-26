@@ -1,12 +1,5 @@
-/* color pallette:
-#DDDDDD
-#222831
-#30475E
-#F05454 */
-
 .App {
   text-align: center;
-  background-color: #000000;
   min-height: 100vh;
   width: 100%;
   display: flex;

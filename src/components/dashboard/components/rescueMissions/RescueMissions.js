@@ -8,6 +8,7 @@ import CalculateProfitLoss from '../helperFunctions/CalculateProfitLoss';
 import CalculateProfitLossPercent from '../helperFunctions/CalculateProfitLossPercent';
 
 function RescueMissions(props) {
+
     return ( 
         <div className="rescue-missions">
             <h1 className="token-income-heading">Rescue Missions</h1>
@@ -75,7 +76,7 @@ function RescueMissions(props) {
                 </div>
                 <div className="mission-pl-wrapper">
                     <p className="token-prices-txt">
-                        +{(CalculateProfitLossPercent((config.rescueMissions.cost*props.puffPriceUsd), (CalculateProfitLoss((config.rescueMissions.cost*props.puffPriceUsd), (LamportstoSol(props.nacFloorPrice)*props.solPriceUsd)))))
+                        {(CalculateProfitLossPercent((config.rescueMissions.cost*props.puffPriceUsd), (CalculateProfitLoss((config.rescueMissions.cost*props.puffPriceUsd), (LamportstoSol(props.nacFloorPrice)*props.solPriceUsd)))))
                             .toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})}%
                     </p>
                 </div>
