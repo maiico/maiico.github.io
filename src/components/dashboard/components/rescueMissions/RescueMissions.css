@@ -3,13 +3,13 @@
   flex-direction: column;
   height: auto;
   width: 100%;
-  background-color: #000000;
+  background-color: #0e1111;
   border-radius: 25px;
   padding: 1.5rem;
   text-align: left;
   border-style: solid;
-  border-color: #14f195;
-  border-width: 2px;
+  border-color: #0e1111;
+  border-width: 5px;
   margin: 0.5rem;
 }
 

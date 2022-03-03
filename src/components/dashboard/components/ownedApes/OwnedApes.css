@@ -3,13 +3,13 @@
   flex-direction: column;
   height: auto;
   width: 100%;
-  background-color: #000000;
+  background-color: #0e1111;
   border-radius: 25px;
   padding: 1.5rem;
   text-align: left;
   border-style: solid;
-  border-color: #14f195;
-  border-width: 2px;
+  border-color: #0e1111;
+  border-width: 5px;
   margin: 0.5rem;
 }
 
@@ -68,6 +68,10 @@
   cursor: pointer;
 }
 
+.owned-input-btn:active {
+  transform: scale(0.95);
+}
+
 .owned-apes-btn-wrapper {
   display: flex;
   flex-direction: row;
@@ -94,9 +98,14 @@
   cursor: pointer;
 }
 
+.calculate-btn:active {
+  transform: scale(0.95);
+}
+
 @media screen and (max-width: 480px) {
   .owned-apes {
     width: 85%;
+    padding: 1rem;
   }
 
   .owned-content-wrapper {

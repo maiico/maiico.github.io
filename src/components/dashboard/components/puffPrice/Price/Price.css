@@ -1,0 +1,55 @@
+.price {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 200px;
+  justify-content: left;
+  align-items: left;
+}
+
+.price-heading {
+  color: #dddddd;
+  font-size: 1.5rem;
+  margin-top: auto;
+  margin-bottom: 0.5rem;
+}
+
+.price-change-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 175px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.price-change {
+  color: #dddddd;
+  font-size: 1rem;
+  margin: auto;
+}
+
+.price-change-red {
+  color: #ff6961;
+  font-size: 1rem;
+  margin: auto;
+}
+
+.price-change-green {
+  color: #77dd77;
+  font-size: 1rem;
+  margin: auto;
+}
+
+@media screen and (max-width: 820px) {
+  .price {
+    margin-top: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .price-change-wrapper {
+    margin: auto;
+  }
+}

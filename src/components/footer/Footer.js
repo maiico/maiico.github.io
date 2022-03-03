@@ -33,6 +33,7 @@ function Footer(props) {
                         </a>
                     </li>
                 </ul>
+                <p className="footer-txt">* content on this site is for informational purposes only. It way contain inacuraccies and should not be taken as financial advice</p>
             </div>
         </div>
      );

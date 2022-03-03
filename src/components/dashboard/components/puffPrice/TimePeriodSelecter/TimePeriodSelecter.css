@@ -1,0 +1,35 @@
+.time-period {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #181a18;
+  border-radius: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5rem;
+}
+
+.time-period-txt {
+  color: #353839;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.time-period-selected {
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 820px) {
+  .time-period {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

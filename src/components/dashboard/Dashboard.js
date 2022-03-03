@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './Dashboard.css';
 import config from '../../Config.json';
 import axios from 'axios';
+import PuffPrice from './components/puffPrice/PuffPrice';
 import TokenPrices from './components/tokenPrices/TokenPrices';
 import TokenIncome from './components/tokenIncome/TokenIncome';
 import FloorPrices from './components/floorPrices/FloorPrices';
@@ -12,7 +13,22 @@ function Dashboard() {
 
     //token prices
     const [solPriceUsd, setSolPriceUsd] = useState(0)
+
+    //puff stats
     const [puffPriceUsd, setPuffPriceUsd] = useState(0)
+    const [puffPriceChange24h, setPuffPriceChange24h] = useState(0)
+    const [puffPriceChange24hPercent, setPuffPriceChange24hPercent] = useState(0)
+    const [puffPriceChange7dPercent, setPuffPriceChange7dPercent] = useState(0)
+    const [puffPriceChange30dPercent, setPuffPriceChange30dPercent] = useState(0)
+    const [puffVolume, setPuffVolume] = useState(0)
+    const [puff24High, setPuff24High] = useState(0)
+    const [puff24Low, setPuff24Low] = useState(0)
+    const [puffAth, setPuffAth] = useState(0)
+    const [puffAthChangePercent, setPuffAthChangePercent] = useState(0)
+    const [puffAtl, setPuffAtl] = useState(0)
+    const [puffAtlChangePercent, setPuffAtlChangePercent] = useState(0)
+
+    //fiat
     const [fiatCurrency, setFiatCurrency] = useState('usd')
 
     //floor prices
@@ -29,13 +45,31 @@ function Dashboard() {
     
     useEffect(() => {
         // fetch token prices
-        const fetchTokenPrices = async () => {
+        const fetchPuffPrices = async () => {
+            try {
+                const res = await axios.get(config.apis.coinGecko.puff)
+                setPuffPriceUsd(res.data.market_data.current_price.usd)
+                setPuffPriceChange24h(res.data.market_data.price_change_24h)
+                setPuffPriceChange24hPercent(res.data.market_data.price_change_percentage_24h)
+                setPuffPriceChange7dPercent(res.data.market_data.price_change_percentage_7d)
+                setPuffPriceChange30dPercent(res.data.market_data.price_change_percentage_30d)
+                setPuffVolume(res.data.market_data.total_volume.usd)
+                setPuff24High(res.data.market_data.high_24h.usd)
+                setPuff24Low(res.data.market_data.low_24h.usd)
+                setPuffAth(res.data.market_data.ath.usd)
+                setPuffAthChangePercent(res.data.market_data.ath_change_percentage.usd)
+                setPuffAtl(res.data.market_data.atl.usd)
+                setPuffAtlChangePercent(res.data.market_data.atl_change_percentage.usd)
+            } catch(err) {
+                console.log(err)
+            }
+        }
+
+        const fetchSolPrices = async () => {
             try {
                 const res = await axios.get(config.apis.coinGecko.url)
                 setSolPriceUsd(res.data.solana.usd)
                 setSolPriceCad(res.data.solana.cad)
-                setPuffPriceUsd(res.data.puff.usd)
-                setPuffPriceCad(res.data.puff.cad)
             } catch(err) {
                 console.log(err)
             }
@@ -58,13 +92,29 @@ function Dashboard() {
             }
         }
 
-        fetchTokenPrices();
+        fetchPuffPrices();
+        fetchSolPrices();
         fetchFloorPrices();
 
     }, []);
 
     return (
         <div className="dashboard">
+            <div className="dashboard-row">
+                <PuffPrice 
+                    puffPriceUsd={puffPriceUsd}
+                    puffPriceChange24hPercent={puffPriceChange24hPercent}
+                    puffPriceChange7dPercent={puffPriceChange7dPercent}
+                    puffPriceChange30dPercent={puffPriceChange30dPercent}
+                    puffVolume={puffVolume}
+                    puff24High={puff24High}
+                    puff24Low={puff24Low}
+                    puffAth={puffAth}
+                    puffAthChangePercent={puffAthChangePercent}
+                    puffAtl={puffAtl}
+                    puffAtlChangePercent={puffAtlChangePercent}
+                />
+            </div>
             <div className="dashboard-row">
                 <OwnedApes 
                     setPuffIncome={setPuffIncome}
