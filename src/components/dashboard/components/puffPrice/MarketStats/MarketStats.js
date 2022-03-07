@@ -3,11 +3,15 @@ import './MarketStats.css';
 
 function MarketStats(props) {
 
-    const percentChangeClass = (percent) => {
+    const percentChangeRender = (percent) => {
         if(percent >= 0) {
-            return "market-stats-green"
+            return <p className="market-stats-green">
+                        +{percent.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}%
+                    </p>
         } else {
-            return "market-stats-red"
+            return <p className="market-stats-red">
+                        {percent.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}%
+                    </p>
         }
     }
 
@@ -49,7 +53,7 @@ function MarketStats(props) {
                 </div>
                 <div className="market-stat-wrapper">
                     <p className="floor-prices-txt">% from ATH</p>
-                    <p className={percentChangeClass(props.puffAthChangePercent)}>{props.puffAthChangePercent.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}%</p>
+                    {percentChangeRender(props.puffAthChangePercent)}
                 </div>
                 <div className="market-stat-wrapper">
                     <p className="floor-prices-txt">ATL</p>
@@ -57,7 +61,7 @@ function MarketStats(props) {
                 </div>
                 <div className="market-stat-wrapper">
                     <p className="floor-prices-txt">% from ATL</p>
-                    <p className={percentChangeClass(props.puffAtlChangePercent)}>{props.puffAtlChangePercent.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}%</p>
+                    {percentChangeRender(props.puffAtlChangePercent)}
                 </div>
             </div>     
         </div>

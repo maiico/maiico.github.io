@@ -9,7 +9,7 @@ const CustomToolTip = props => {
     return (
       <div className="custom-tooltip">
         <p className="tooltip-label">
-          <strong>{moment.unix(label).format("ddd, MMM Do YYYY, h:mm:ss a")}</strong>
+          <strong>{moment(label).format("ddd, MMM Do YYYY, h:mm:ss a")}</strong>
         </p>
         {payload.map((item, i) => (
           <p className="tooltip-value" key={i}>
