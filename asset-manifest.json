@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ebb3f996.css",
-    "main.js": "/static/js/main.f67e658f.js",
+    "main.js": "/static/js/main.8cc4f1da.js",
     "static/media/nac.png": "/static/media/nac.67b0f348237be48272b9.png",
     "static/media/truccos-avatar.png": "/static/media/truccos-avatar.2b2b7e8c466b77a9b2f2.png",
     "static/media/sac.png": "/static/media/sac.46ef38d6c1e947224f1f.png",
@@ -9,10 +9,10 @@
     "static/media/puffalytics-logo.png": "/static/media/puffalytics-logo.4166c795cafcc2e5fa29.png",
     "index.html": "/index.html",
     "main.ebb3f996.css.map": "/static/css/main.ebb3f996.css.map",
-    "main.f67e658f.js.map": "/static/js/main.f67e658f.js.map"
+    "main.8cc4f1da.js.map": "/static/js/main.8cc4f1da.js.map"
   },
   "entrypoints": [
     "static/css/main.ebb3f996.css",
-    "static/js/main.f67e658f.js"
+    "static/js/main.8cc4f1da.js"
   ]
 }
