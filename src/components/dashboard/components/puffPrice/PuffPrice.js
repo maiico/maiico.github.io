@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './PuffPrice.css';
-import Chart24hr from './Chart24hr.js/Chart24hr';
-import Chart7d from './Chart24hr.js/Chart7d';
-import Chart30d from './Chart24hr.js/Chart30d';
+import Chart24hr from './Chart24hr/Chart24hr';
+import Chart7d from './Chart24hr/Chart7d';
+import Chart30d from './Chart24hr/Chart30d';
 import MarketStats from './MarketStats/MarketStats';
 import Price from './Price/Price';
 import TimePeriodSelecter from './TimePeriodSelecter/TimePeriodSelecter';
+import Converter from './Converter/Converter';
+import puffIcon from '../../../images/puff-logo.jpeg';
 
 function PuffPrice(props) {
 
@@ -45,7 +47,10 @@ function PuffPrice(props) {
 
     return ( 
         <div className="puff-price">
-            <h1 className="token-income-heading">$PUFF</h1>
+            <div className="puff-price-heading-container">
+                <img src={puffIcon} className="puff-logo" alt="puff"/>
+                <h1 className="token-income-heading">$PUFF</h1>
+            </div>
             <div className="puff-price-content">
                 <div className="price-container">
                     <div className="price-time-container">
@@ -64,6 +69,9 @@ function PuffPrice(props) {
                     <div className="chart-container">
                         {renderChart()}
                     </div>
+                    <Converter 
+                        puffPrices={props.puffPrices}
+                    />
                 </div>
                 <MarketStats 
                     puffPriceUsd={props.puffPriceUsd}

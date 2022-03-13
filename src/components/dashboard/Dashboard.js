@@ -15,6 +15,7 @@ function Dashboard() {
     const [solPriceUsd, setSolPriceUsd] = useState(0)
 
     //puff stats
+    const [puffPrices, setPuffPrices] = useState(0)
     const [puffPriceUsd, setPuffPriceUsd] = useState(0)
     const [puffPriceChange24h, setPuffPriceChange24h] = useState(0)
     const [puffPriceChange24hPercent, setPuffPriceChange24hPercent] = useState(0)
@@ -42,12 +43,15 @@ function Dashboard() {
     //puff income
     const [puffIncome, setPuffIncome] = useState(0)
 
-    
+    //one minute in milliseconds for timer
+    const minuteMs = 60000;
+
     useEffect(() => {
         // fetch token prices
         const fetchPuffPrices = async () => {
             try {
                 const res = await axios.get(config.apis.coinGecko.puff)
+                setPuffPrices(res.data.market_data.current_price)
                 setPuffPriceUsd(res.data.market_data.current_price.usd)
                 setPuffPriceChange24h(res.data.market_data.price_change_24h)
                 setPuffPriceChange24hPercent(res.data.market_data.price_change_percentage_24h)
@@ -92,9 +96,19 @@ function Dashboard() {
             }
         }
 
+        //timer for fetching data every minute
+        const interval = setInterval(() => {
+            fetchPuffPrices();
+            fetchSolPrices();
+            fetchFloorPrices();
+        }, minuteMs)
+
         fetchPuffPrices();
         fetchSolPrices();
         fetchFloorPrices();
+
+        //clear timer on unmount
+        return () => clearInterval(interval);
 
     }, []);
 
@@ -102,6 +116,7 @@ function Dashboard() {
         <div className="dashboard">
             <div className="dashboard-row">
                 <PuffPrice 
+                    puffPrices={puffPrices}
                     puffPriceUsd={puffPriceUsd}
                     puffPriceChange24hPercent={puffPriceChange24hPercent}
                     puffPriceChange7dPercent={puffPriceChange7dPercent}

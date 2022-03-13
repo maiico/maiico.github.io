@@ -4,18 +4,21 @@ import config from '../../../../../Config.json';
 import MutateChartData from '../../helperFunctions/MutateChartData';
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import CustomToolTip from '../CustomToolTip/CustomToolTip';
-import moment from 'moment'
 import Loading from '../../../../loading/Loading';
 
-function Chart7d(props) {
+function Chart24hr(props) {
 
     //chart data
     const [chartData, setChartData] = useState([]);
 
-    //format date for y-axis
+    //format date for 24hr
     const dateFormatter = (timeStamp) => {
 
-        const output = moment(timeStamp).format("MMM DD");
+        const date = new Date(timeStamp)
+        const hours = date.getHours()
+        const minutes = date.getMinutes()
+
+        const output = ("0" + hours).slice(-2) + ':' + ("0" + minutes).slice(-2);
 
         return output;
     }
@@ -27,22 +30,33 @@ function Chart7d(props) {
         return formattedPrice;
     }
 
+    //one minute in milliseconds for timer
+    const minuteMs = 60000;
+
     useEffect(() => {
         //fetch data
         const fetchData = async () => {
             try{
-                const res = await axios.get(config.apis.coinGecko.chartData7d)
+                const res = await axios.get(config.apis.coinGecko.chartData24hr)
                 const data = MutateChartData(res.data.prices)
                 setChartData(data)
 
-                props.setHistoricalPrice7d(data[0].price)
+                props.setHistoricalPrice24h(data[0].price)
 
             } catch(err) {
                 console.log(err)
             }
         }
 
+        //timer for fetching data every minute
+        const interval = setInterval(() => {
+            fetchData();
+        }, minuteMs)
+
         fetchData();
+        
+        //clear timer on unmount
+        return () => clearInterval(interval);
 
     }, [])
 
@@ -100,5 +114,5 @@ function Chart7d(props) {
     }
 }
 
-export default Chart7d;
+export default Chart24hr;
 

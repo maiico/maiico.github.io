@@ -27,6 +27,9 @@ function Chart30d(props) {
         return formattedPrice;
     }
 
+    //one minute in milliseconds for timer
+    const minuteMs = 60000;
+
     useEffect(() => {
         //fetch data
         const fetchData = async () => {
@@ -42,7 +45,15 @@ function Chart30d(props) {
             }
         }
 
+        //timer for fetching data every minute
+        const interval = setInterval(() => {
+            fetchData();
+        }, minuteMs)
+
         fetchData();
+        
+        //clear timer on unmount
+        return () => clearInterval(interval);
 
     }, [])
 
