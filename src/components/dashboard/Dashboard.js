@@ -8,7 +8,7 @@ import TokenIncome from './components/tokenIncome/TokenIncome';
 import FloorPrices from './components/floorPrices/FloorPrices';
 // import RescueMissions from './components/rescueMissions/RescueMissions';
 import OwnedApes from './components/ownedApes/OwnedApes';
-// import Defi from './components/defi/Defi';
+import Defi from './components/defi/Defi';
 
 function Dashboard() {
 

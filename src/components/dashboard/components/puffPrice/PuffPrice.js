@@ -8,6 +8,8 @@ import Price from './Price/Price';
 import TimePeriodSelecter from './TimePeriodSelecter/TimePeriodSelecter';
 import Converter from './Converter/Converter';
 import puffIcon from '../../../images/puff-logo.jpeg';
+import axios from 'axios';
+import config from '../../../../Config.json';
 
 function PuffPrice(props) {
 
@@ -16,6 +18,11 @@ function PuffPrice(props) {
     const [historicalPrice24h, setHistoricalPrice24h] = useState(0)
     const [historicalPrice7d, setHistoricalPrice7d] = useState(0)
     const [historicalPrice30d, setHistoricalPrice30d] = useState(0)
+
+    //puff market cap, circulating supply, and burned
+    const [puffCirculatingSupply, setPuffCirculatingSupply] = useState(0)
+    const [puffBurned, setPuffBurned] = useState(0)
+    const [puffMarketCap, setPuffMarketCap] = useState(0)
 
 
     //set historical price to match current view
@@ -43,6 +50,23 @@ function PuffPrice(props) {
             return  <Chart30d setHistoricalPrice30d={setHistoricalPrice30d} />
         }
     }
+
+    useEffect(() => {
+
+        //fetch puff marketcap data
+        const fetchMarketCap = async () => {
+            try {
+                const res = await axios.get(config.apis.sac.marketcap)
+                setPuffCirculatingSupply(res.data.circulatingSupply)
+                setPuffBurned(res.data.burnedSupply)
+                setPuffMarketCap(res.data.marketCap)
+            } catch(err) {
+                console.log(err)
+            }
+        }
+
+        fetchMarketCap()
+    }, [])
     
 
     return ( 
@@ -75,6 +99,9 @@ function PuffPrice(props) {
                 </div>
                 <MarketStats 
                     puffPriceUsd={props.puffPriceUsd}
+                    puffCirculatingSupply={puffCirculatingSupply}
+                    puffBurned={puffBurned}
+                    puffMarketCap={puffMarketCap}
                     puffVolume={props.puffVolume}
                     puff24High={props.puff24High}
                     puff24Low={props.puff24Low}

@@ -25,15 +25,15 @@ function MarketStats(props) {
                 </div>
                 <div className="market-stat-wrapper">
                     <p className="floor-prices-txt">Market Cap</p>
-                    <p className="floor-prices-txt">-</p>
+                    <p className="floor-prices-txt">${props.puffMarketCap.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} USD</p>
                 </div>
                 <div className="market-stat-wrapper">
                     <p className="floor-prices-txt">Circulating Supply</p>
-                    <p className="floor-prices-txt">-</p>
+                    <p className="floor-prices-txt">{props.puffCirculatingSupply.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
                 </div>
                 <div className="market-stat-wrapper">
                     <p className="floor-prices-txt">$PUFF Burned</p>
-                    <p className="floor-prices-txt">-</p>
+                    <p className="floor-prices-txt">{props.puffBurned.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
                 </div>
                 <div className="market-stat-wrapper">
                     <p className="floor-prices-txt">Volume</p>
