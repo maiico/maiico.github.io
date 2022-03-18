@@ -3,11 +3,12 @@ import './Dashboard.css';
 import config from '../../Config.json';
 import axios from 'axios';
 import PuffPrice from './components/puffPrice/PuffPrice';
-import TokenPrices from './components/tokenPrices/TokenPrices';
+// import TokenPrices from './components/tokenPrices/TokenPrices';
 import TokenIncome from './components/tokenIncome/TokenIncome';
 import FloorPrices from './components/floorPrices/FloorPrices';
-import RescueMissions from './components/rescueMissions/RescueMissions';
+// import RescueMissions from './components/rescueMissions/RescueMissions';
 import OwnedApes from './components/ownedApes/OwnedApes';
+// import Defi from './components/defi/Defi';
 
 function Dashboard() {
 
@@ -29,6 +30,9 @@ function Dashboard() {
     const [puffAtl, setPuffAtl] = useState(0)
     const [puffAtlChangePercent, setPuffAtlChangePercent] = useState(0)
 
+    //all stats
+    const [allPrice, setAllPrice] = useState(0)
+
     //fiat
     const [fiatCurrency, setFiatCurrency] = useState('usd')
 
@@ -40,8 +44,11 @@ function Dashboard() {
     const [nacFloorPrice, setNacFloorPrice] = useState(0)
     const [nacTotalListed, setNacTotalListed] = useState(0)
 
-    //puff income
+    //$PUFF income
     const [puffIncome, setPuffIncome] = useState(0)
+
+    //$ALL income
+    const [allIncome, setAllIncome] = useState(0)
 
     //one minute in milliseconds for timer
     const minuteMs = 60000;
@@ -82,7 +89,6 @@ function Dashboard() {
         //fetch floor prices
         const fetchFloorPrices = async () => {
             try {
-
                 let res = await axios.get(config.apis.magicEden.sac)
                 setSacFloorPrice(res.data.floorPrice)
                 setSacTotalListed(res.data.listedCount)
@@ -90,7 +96,19 @@ function Dashboard() {
                 res = await axios.get(config.apis.magicEden.nac)
                 setNacFloorPrice(res.data.floorPrice)
                 setNacTotalListed(res.data.listedCount)
+            } catch(err) {
+                console.log(err)
+            }
+        }
 
+        //fetch all price
+        const fetchAllPrice = async () => {
+            try {
+                let res = await axios.get(config.apis.solScan.all)
+                let allPriceSol = res.data.data.price
+                let allPriceUSD = allPriceSol * solPriceUsd
+
+                setAllPrice(allPriceUSD)
             } catch(err) {
                 console.log(err)
             }
@@ -105,6 +123,7 @@ function Dashboard() {
 
         fetchPuffPrices();
         fetchSolPrices();
+        fetchAllPrice();
         fetchFloorPrices();
 
         //clear timer on unmount
@@ -133,20 +152,23 @@ function Dashboard() {
             <div className="dashboard-row">
                 <OwnedApes 
                     setPuffIncome={setPuffIncome}
+                    setAllIncome={setAllIncome}
                 />
             </div>
             <div className="dashboard-row">
                 <div className="dashboard-col">
-                    <TokenPrices 
+                    {/* <TokenPrices 
                         solPriceUsd={solPriceUsd}
                         solPriceCad={solPriceCad}
                         puffPriceUsd={puffPriceUsd}
                         puffPriceCad={puffPriceCad}
-                    />
+                    /> */}
                     <TokenIncome 
                         puffIncome={puffIncome}
                         puffPriceUsd={puffPriceUsd}
                         puffPriceCad={puffPriceCad}
+                        allIncome={allIncome}
+                        allPriceUsd={allPrice}
                         fiatCurrency={'USD'}
                     />
                 </div>
@@ -163,7 +185,8 @@ function Dashboard() {
                     />
                 </div>
             </div>
-            <div className="dashboard-row">
+            {/* <div className="dashboard-row">
+                <Defi />
                 <RescueMissions 
                     nacFloorPrice={nacFloorPrice}
                     solPriceUsd={solPriceUsd}
@@ -171,7 +194,7 @@ function Dashboard() {
                     puffPriceUsd={puffPriceUsd}
                     puffPriceCad={puffPriceCad}
                 />
-            </div>
+            </div> */}
         </div>
     );
 }

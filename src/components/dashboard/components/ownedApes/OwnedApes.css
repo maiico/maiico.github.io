@@ -34,7 +34,7 @@
 .role-wrapper {
   display: flex;
   flex-direction: row;
-  height: auto;
+  height: 2.5rem;
   width: 95%;
   justify-content: space-between;
   text-align: left;
@@ -62,9 +62,9 @@
   border-radius: 50%;
   border-style: none;
   margin: 1rem;
-  color: #dddddd;
+  color: #9945ff;
   font-weight: bold;
-  background-color: #9945ff;
+  background-color: #0e1111;
   cursor: pointer;
 }
 
@@ -102,10 +102,38 @@
   transform: scale(0.95);
 }
 
+.collection-heading-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+
+.collection-img {
+  height: auto;
+  width: 49px;
+  border-radius: 50%;
+}
+.owned-apes-heading {
+  font-size: 1.25rem;
+  background: -webkit-linear-gradient(left, #9945ff, #14f195);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.owned-apes-txt {
+  color: #dddddd;
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 480px) {
   .owned-apes {
     width: 85%;
     padding: 1rem;
+  }
+
+  .owned-collection-wrapper {
+    margin-bottom: 1rem;
   }
 
   .owned-content-wrapper {

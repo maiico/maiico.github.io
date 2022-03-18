@@ -24,7 +24,7 @@
 .dashboard-col {
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 100%;
   width: 50%;
   justify-content: center;
   align-items: center;

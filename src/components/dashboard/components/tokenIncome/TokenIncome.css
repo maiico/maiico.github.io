@@ -20,6 +20,17 @@
   -webkit-text-fill-color: transparent;
 }
 
+.token-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: #0e1111;
+}
+
 .token-income-wrapper {
   display: flex;
   flex-direction: row;
@@ -59,6 +70,30 @@
   width: 33%;
   text-align: right;
   justify-content: right;
+}
+
+.token-logo {
+  height: auto;
+  width: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0.5rem;
+}
+
+.token-name-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: auto;
+  text-align: left;
+  align-items: center;
+  justify-content: left;
+  justify-items: left;
+}
+
+.token-income-txt {
+  color: #dddddd;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 820px) {

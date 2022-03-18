@@ -10,11 +10,11 @@ function FloorPrices(props) {
 
     return (
         <div className="floor-prices">
-            <h1 className="token-prices-heading">Floor Price</h1>
+            <h1 className="floor-prices-heading">Floor Price</h1>
             <div className="collection-wrapper">
                 <div className="collection-heading-wrapper">
                     <img src={SAC} className="collection-img" alt="Stoned Ape Crew" />
-                    <h2 className="collection-subheader">SAC</h2>
+                    <h2 className="collection-subheader">Stoned Ape Crew</h2>
                 </div>
                     <div className="collection-stat-wrapper">
                         <p className="floor-prices-txt">Floor (SOL)</p>
@@ -38,7 +38,7 @@ function FloorPrices(props) {
             <div className="collection-wrapper">
                 <div className="collection-heading-wrapper">
                     <img src={NAC} className="collection-img" alt="Nuked Ape Crew" />
-                    <h2 className="collection-subheader">NAC</h2>
+                    <h2 className="collection-subheader">Nuked Apes</h2>
                 </div>
                     <div className="collection-stat-wrapper">
                         <p className="floor-prices-txt">Floor (SOL)</p>

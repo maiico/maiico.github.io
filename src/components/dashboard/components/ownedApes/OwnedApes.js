@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './OwnedApes.css';
 import SAC from '../../../images/sac.png';
 import NAC from '../../../images/nac.png';
+import BestBuds from '../../../images/best-buds.png';
 
 function OwnedApes(props) {
-
-    //puff income
-    const [puffIncome, setPuffIncome] = useState(0)
 
     //owned sac apes
     const [chimpionCount, setChimpionCount] = useState(0)
@@ -20,6 +18,10 @@ function OwnedApes(props) {
     const [epicCount, setEpicCount] = useState(0)
     const [mysticCount, setMysticCount] = useState(0)
     const [nacLegendaryCount, setNacLegendaryCount] = useState(0)
+
+    //owned best buds / mary janes
+    const [bestBudsCount, setBestBudsCount] = useState(0)
+    const [maryJanesCount, setMaryJanesCount] = useState(0)
 
 
     //add apes to state
@@ -51,6 +53,12 @@ function OwnedApes(props) {
                 break;
             case "nacLegendary":
                 setNacLegendaryCount(nacLegendaryCount + 1)
+                break;
+            case "bestBuds":
+                setBestBudsCount(bestBudsCount + 1)
+                break;
+            case "maryJanes":
+                setMaryJanesCount(maryJanesCount + 1)
                 break;
             default:
                 break;
@@ -87,12 +95,18 @@ function OwnedApes(props) {
             case "nacLegendary":
                 setNacLegendaryCount(nacLegendaryCount - 1)
                 break;
+            case "bestBuds":
+                setBestBudsCount(bestBudsCount - 1)
+                break;
+            case "maryJanes":
+                setMaryJanesCount(maryJanesCount - 1)
+                break;
             default:
                 break;
         }
     }
 
-    //calculate total puff income
+    //calculate total $PUFF income
     const calculatePuffIncome = () => {
 
         //sac
@@ -124,6 +138,43 @@ function OwnedApes(props) {
         props.setPuffIncome(totalPuffIncome);
     }
 
+    //calculate total $ALL income
+    const calculateAllIncome = () => {
+
+        //sac
+        const chimpion = chimpionCount * 42
+        const role = roleCount * 42
+        const sealz = sealzCount * 42
+        const sacLegendary = sacLegendaryCount * 42
+
+        //nac
+        const common = commonCount * 21
+        const rare = rareCount * 21
+        const epic = epicCount * 21
+        const mystic = mysticCount * 21
+        const nacLegendary = nacLegendaryCount * 21
+
+        //bestbuds
+        const bestBuds = bestBudsCount * 8
+        const maryJanes = maryJanesCount * 8
+
+
+        const totalAllIncome = 
+            chimpion 
+            + role
+            + sealz
+            + sacLegendary
+            + common
+            + rare
+            + epic
+            + mystic
+            + nacLegendary
+            + bestBuds
+            + maryJanes
+
+        props.setAllIncome(totalAllIncome)
+    }
+
     //reset all apes to 0
     const clearAllApes = () => {
         setChimpionCount(0)
@@ -135,13 +186,22 @@ function OwnedApes(props) {
         setEpicCount(0)
         setMysticCount(0)
         setNacLegendaryCount(0)
+        setBestBudsCount(0)
+        setMaryJanesCount(0)
 
         props.setPuffIncome(0)
+        props.setAllIncome(0)
+    }
+
+    //calculate all token income
+    const calculateIncome = () => {
+        calculatePuffIncome()
+        calculateAllIncome()
     }
 
     return (
         <div className="owned-apes">
-            <h1 className="token-prices-heading">My Apes</h1>
+            <h1 className="owned-apes-heading">My NFTs</h1>
             <div className="owned-content-wrapper">
                 <div className="owned-collection-wrapper">
                     <div className="collection-heading-wrapper">
@@ -149,34 +209,34 @@ function OwnedApes(props) {
                         <h2 className="collection-subheader">Stoned Ape Crew</h2>
                     </div>
                         <div className="role-wrapper">
-                            <p className="token-prices-txt">Chimpion</p>
+                            <p className="owned-apes-txt">Chimpion</p>
                             <div className="owned-input-wrapper">
                                 <button className="owned-input-btn" onClick={() => subtractApe("chimpion")}>-</button>
-                                    <p className="token-prices-txt">{chimpionCount}</p>
+                                    <p className="owned-apes-txt">{chimpionCount}</p>
                                 <button className="owned-input-btn" onClick={() => addApe("chimpion")}>+</button>
                             </div>
                         </div>
                         <div className="role-wrapper">
-                            <p className="token-prices-txt">Role</p>
+                            <p className="owned-apes-txt">Role</p>
                             <div className="owned-input-wrapper">
                                 <button className="owned-input-btn" onClick={() => subtractApe("role")}>-</button>
-                                    <p className="token-prices-txt">{roleCount}</p>
+                                    <p className="owned-apes-txt">{roleCount}</p>
                                 <button className="owned-input-btn" onClick={() => addApe("role")}>+</button>
                             </div>
                         </div>
                         <div className="role-wrapper">
-                            <p className="token-prices-txt">420 Sealz</p>
+                            <p className="owned-apes-txt">420 Sealz</p>
                             <div className="owned-input-wrapper">
                                 <button className="owned-input-btn" onClick={() => subtractApe("sealz")}>-</button>
-                                    <p className="token-prices-txt">{sealzCount}</p>
+                                    <p className="owned-apes-txt">{sealzCount}</p>
                                 <button className="owned-input-btn" onClick={() => addApe("sealz")}>+</button>
                             </div>
                         </div>
                         <div className="role-wrapper">
-                            <p className="token-prices-txt">Legendary</p>
+                            <p className="owned-apes-txt">Legendary</p>
                             <div className="owned-input-wrapper">
                                 <button className="owned-input-btn" onClick={() => subtractApe("sacLegendary")}>-</button>
-                                    <p className="token-prices-txt">{sacLegendaryCount}</p>
+                                    <p className="owned-apes-txt">{sacLegendaryCount}</p>
                                 <button className="owned-input-btn" onClick={() => addApe("sacLegendary")}>+</button>
                             </div>
                         </div>
@@ -187,49 +247,71 @@ function OwnedApes(props) {
                         <h2 className="collection-subheader">Nuked Apes</h2>
                     </div>
                         <div className="role-wrapper">
-                            <p className="token-prices-txt">Common</p>
+                            <p className="owned-apes-txt">Common</p>
                             <div className="owned-input-wrapper">
                                 <button className="owned-input-btn" onClick={() => subtractApe("common")}>-</button>
-                                    <p className="token-prices-txt">{commonCount}</p>
+                                    <p className="owned-apes-txt">{commonCount}</p>
                                 <button className="owned-input-btn" onClick={() => addApe("common")}>+</button>
                             </div>
                         </div>
                         <div className="role-wrapper">
-                            <p className="token-prices-txt">Rare</p>
+                            <p className="owned-apes-txt">Rare</p>
                             <div className="owned-input-wrapper">
                                 <button className="owned-input-btn" onClick={() => subtractApe("rare")}>-</button>
-                                    <p className="token-prices-txt">{rareCount}</p>
+                                    <p className="owned-apes-txt">{rareCount}</p>
                                 <button className="owned-input-btn" onClick={() => addApe("rare")}>+</button>
                             </div>
                         </div>
                         <div className="role-wrapper">
-                            <p className="token-prices-txt">Epic</p>
+                            <p className="owned-apes-txt">Epic</p>
                             <div className="owned-input-wrapper">
                                 <button className="owned-input-btn" onClick={() => subtractApe("epic")}>-</button>
-                                    <p className="token-prices-txt">{epicCount}</p>
+                                    <p className="owned-apes-txt">{epicCount}</p>
                                 <button className="owned-input-btn" onClick={() => addApe("epic")}>+</button>
                             </div>
                         </div>
                         <div className="role-wrapper">
-                            <p className="token-prices-txt">Mystic</p>
+                            <p className="owned-apes-txt">Mystic</p>
                             <div className="owned-input-wrapper">
                                 <button className="owned-input-btn" onClick={() => subtractApe("mystic")}>-</button>
-                                    <p className="token-prices-txt">{mysticCount}</p>
+                                    <p className="owned-apes-txt">{mysticCount}</p>
                                 <button className="owned-input-btn" onClick={() => addApe("mystic")}>+</button>
                             </div>
                         </div>
                         <div className="role-wrapper">
-                            <p className="token-prices-txt">Legendary</p>
+                            <p className="owned-apes-txt">Legendary</p>
                             <div className="owned-input-wrapper">
                                 <button className="owned-input-btn" onClick={() => subtractApe("nacLegendary")}>-</button>
-                                    <p className="token-prices-txt">{nacLegendaryCount}</p>
+                                    <p className="owned-apes-txt">{nacLegendaryCount}</p>
                                 <button className="owned-input-btn" onClick={() => addApe("nacLegendary")}>+</button>
+                            </div>
+                        </div>
+                </div>
+                <div className="owned-collection-wrapper">
+                    <div className="collection-heading-wrapper">
+                        <img src={BestBuds} className="collection-img" alt="Stoned Ape Crew" />
+                        <h2 className="collection-subheader">BestBuds / MaryJanes</h2>
+                    </div>
+                        <div className="role-wrapper">
+                            <p className="owned-apes-txt">BestBuds</p>
+                            <div className="owned-input-wrapper">
+                                <button className="owned-input-btn" onClick={() => subtractApe("bestBuds")}>-</button>
+                                    <p className="owned-apes-txt">{bestBudsCount}</p>
+                                <button className="owned-input-btn" onClick={() => addApe("bestBuds")}>+</button>
+                            </div>
+                        </div>
+                        <div className="role-wrapper">
+                            <p className="owned-apes-txt">MaryJanes</p>
+                            <div className="owned-input-wrapper">
+                                <button className="owned-input-btn" onClick={() => subtractApe("maryJanes")}>-</button>
+                                    <p className="owned-apes-txt">{maryJanesCount}</p>
+                                <button className="owned-input-btn" onClick={() => addApe("maryJanes")}>+</button>
                             </div>
                         </div>
                 </div>
             </div>
             <div className="owned-apes-btn-wrapper">
-                <button className="calculate-btn" onClick={() => calculatePuffIncome()}>Puff Puff Stats</button>
+                <button className="calculate-btn" onClick={() => calculateIncome()}>Puff Puff Stats</button>
                 <button className="calculate-btn" onClick={() => clearAllApes()}>Clear All</button>
             </div>
         </div>

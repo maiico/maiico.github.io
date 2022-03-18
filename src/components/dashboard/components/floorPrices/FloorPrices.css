@@ -72,6 +72,13 @@
   font-size: 1rem;
 }
 
+.floor-prices-heading {
+  font-size: 1.25rem;
+  background: -webkit-linear-gradient(left, #9945ff, #14f195);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media screen and (max-width: 820px) {
   .floor-prices {
     width: 85%;

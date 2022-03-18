@@ -7,6 +7,9 @@
             "chartData7d": "https://api.coingecko.com/api/v3/coins/puff/market_chart?vs_currency=usd&days=7",
             "chartData30d": "https://api.coingecko.com/api/v3/coins/puff/market_chart?vs_currency=usd&days=30"
         },
+        "solScan": {
+            "all": "https://api.solscan.io/amm/read?address=CJUaR3jguwqctj3BN3DZETwjaXFpRzrRMVhAAFjrHAP1"
+        },
         "magicEden": {
             "sac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getsacfloorprice",
             "nac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getnacfloorprice"

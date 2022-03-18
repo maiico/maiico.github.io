@@ -1,0 +1,89 @@
+.defi {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 50%;
+  background-color: #0e1111;
+  border-radius: 25px;
+  margin: 0.5rem;
+  padding: 1.5rem;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+}
+
+.defi-heading {
+  font-size: 1.25rem;
+  background: -webkit-linear-gradient(left, #9945ff, #14f195);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.defi-heading-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 20%;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
+
+.defi-logo {
+  height: auto;
+  width: 125px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0.5rem;
+}
+
+.defi-hex {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.defi-subheading {
+  color: #14f195;
+  font-size: 1rem;
+}
+
+.liquidity-pools {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.dex-headings-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #333333;
+}
+
+.defi-stat-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 20%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.dex-heading-txt {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.dex-txt {
+  font-size: 0.9rem;
+  color: #ffffff;
+}

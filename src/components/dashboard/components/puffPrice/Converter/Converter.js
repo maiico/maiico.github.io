@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Converter.css';
 
 function Converter(props) {
@@ -66,7 +66,7 @@ function Converter(props) {
 
     const handleFromCurrencyInputChange = (e) => {
         setFromCurrencyAmt(e.target.value)
-        if(fromCurrency == "PUFF") {
+        if(fromCurrency === "PUFF") {
             setToCurrencyAmt(e.target.value * props.puffPrices[toCurrency])
         } else {
             setToCurrencyAmt(e.target.value / props.puffPrices[fromCurrency])
@@ -76,7 +76,7 @@ function Converter(props) {
 
     //render the form based on from/to value
     const renderForm = () => {
-        if(fromCurrency == "PUFF") {
+        if(fromCurrency === "PUFF") {
             return (
                 <form className="converter-form">
                     <label className="converter-form-label">
