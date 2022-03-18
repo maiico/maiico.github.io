@@ -105,10 +105,10 @@ function Dashboard() {
         const fetchAllPrice = async () => {
             try {
                 let res = await axios.get(config.apis.solScan.all)
-                let allPriceSol = res.data.data.price
-                let allPriceUSD = allPriceSol * solPriceUsd
+                // let allPriceSol = await res.data.data.price
+                // let allPriceUSD = await allPriceSol * solPriceUsd
 
-                setAllPrice(allPriceUSD)
+                setAllPrice(res.data.data.price)
             } catch(err) {
                 console.log(err)
             }
@@ -168,7 +168,8 @@ function Dashboard() {
                         puffPriceUsd={puffPriceUsd}
                         puffPriceCad={puffPriceCad}
                         allIncome={allIncome}
-                        allPriceUsd={allPrice}
+                        allPriceSol={allPrice}
+                        solPriceUsd={solPriceUsd}
                         fiatCurrency={'USD'}
                     />
                 </div>

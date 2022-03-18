@@ -121,7 +121,7 @@ function TokenIncome(props) {
                     </div>
                     <div className="token-value-wrapper">
                         <p className="token-income-txt">
-                            ${(props.allIncome*props.allPriceUsd)
+                            ${((props.allIncome*props.allPriceSol)*props.solPriceUsd)
                                 .toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}&nbsp;{props.fiatCurrency}
                         </p>
                     </div>
@@ -138,9 +138,10 @@ function TokenIncome(props) {
                     </div>
                     <div className="token-value-wrapper">
                         <p className="token-income-txt">
-                            ${((props.allIncome * 7)
-                                *props.allPriceUsd)
-                                    .toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}&nbsp;{props.fiatCurrency}
+                            ${(((((props.allIncome * 7))
+                                *props.allPriceSol))
+                                    *props.solPriceUsd)
+                                        .toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}&nbsp;{props.fiatCurrency}
                         </p>
                     </div>
                 </div>
@@ -156,9 +157,10 @@ function TokenIncome(props) {
                     </div>
                     <div className="token-value-wrapper">
                         <p className="token-income-txt">
-                            ${((props.allIncome * 30.437)
-                                *props.allPriceUsd)
-                                .toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}&nbsp;{props.fiatCurrency}
+                            ${(((((props.allIncome * 30.437))
+                                    *props.allPriceSol))
+                                        *props.solPriceUsd)
+                                            .toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}&nbsp;{props.fiatCurrency}
                         </p>
                     </div>
                 </div>
@@ -174,9 +176,10 @@ function TokenIncome(props) {
                     </div>
                     <div className="token-value-wrapper">
                         <p className="token-income-txt">
-                            ${((props.allIncome * 365)
-                                *props.allPriceUsd)
-                                .toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}&nbsp;{props.fiatCurrency}
+                            ${(((((props.allIncome * 365))
+                                    *props.allPriceSol))
+                                        *props.solPriceUsd)
+                                            .toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}&nbsp;{props.fiatCurrency}
                         </p>
                     </div>
                 </div>
