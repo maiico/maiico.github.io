@@ -2,14 +2,16 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  width: 50%;
+  min-height: 32rem;
+  width: 87%;
   background-color: #0e1111;
   border-radius: 25px;
-  margin: 0.5rem;
   padding: 1.5rem;
   text-align: left;
-  justify-content: left;
-  align-items: left;
+  border-style: solid;
+  border-color: #0e1111;
+  border-width: 5px;
+  margin: 0.5rem;
 }
 
 .defi-heading {
@@ -22,16 +24,17 @@
 .defi-heading-wrapper {
   display: flex;
   flex-direction: row;
-  height: auto;
-  width: 20%;
+  height: 2rem;
+  width: 25%;
   justify-content: left;
-  align-items: left;
+  align-items: center;
   text-align: left;
+  margin: auto;
 }
 
 .defi-logo {
   height: auto;
-  width: 125px;
+  width: 25px;
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 0.5rem;
@@ -60,7 +63,7 @@
 .dex-headings-wrapper {
   display: flex;
   flex-direction: row;
-  height: auto;
+  height: 3rem;
   width: 100%;
   justify-content: space-between;
   border-bottom-style: solid;
@@ -72,10 +75,36 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  width: 20%;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  width: 18.75%;
+  justify-content: right;
+  text-align: right;
+  align-items: right;
+}
+
+.farms-heading-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 33%;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #333333;
+}
+
+.farms-stat-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 33%;
+  justify-content: right;
+  align-items: right;
+  text-align: right;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #333333;
 }
 
 .dex-heading-txt {
@@ -86,4 +115,19 @@
 .dex-txt {
   font-size: 0.9rem;
   color: #ffffff;
+}
+
+@media screen and (max-width: 820px) {
+  .defi {
+    width: 85%;
+    padding: 1rem;
+  }
+
+  .defi-subheading {
+    font-size: 0.75rem;
+  }
+
+  .dex-txt {
+    font-size: 0.75rem;
+  }
 }

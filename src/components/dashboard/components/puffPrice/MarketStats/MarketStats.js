@@ -20,47 +20,47 @@ function MarketStats(props) {
             <h1 className="token-income-heading">Market Stats</h1>   
             <div className="market-stats-wrapper">
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">Price</p>
-                    <p className="floor-prices-txt">${props.puffPriceUsd} USD</p>
+                    <p className="market-stats-txt">Price</p>
+                    <p className="market-stats-txt">${props.puffPriceUsd} USD</p>
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">Market Cap</p>
-                    <p className="floor-prices-txt">${props.puffMarketCap.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} USD</p>
+                    <p className="market-stats-txt">Market Cap</p>
+                    <p className="market-stats-txt">${props.puffMarketCap.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} USD</p>
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">Circulating Supply</p>
-                    <p className="floor-prices-txt">{props.puffCirculatingSupply.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+                    <p className="market-stats-txt">Circulating Supply</p>
+                    <p className="market-stats-txt">{props.puffCirculatingSupply.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">$PUFF Burned</p>
-                    <p className="floor-prices-txt">{props.puffBurned.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+                    <p className="market-stats-txt">$PUFF Burned</p>
+                    <p className="market-stats-txt">{props.puffBurned.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">Volume</p>
-                    <p className="floor-prices-txt">{props.puffVolume.toLocaleString()}</p>
+                    <p className="market-stats-txt">Volume</p>
+                    <p className="market-stats-txt">{props.puffVolume.toLocaleString()}</p>
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">24h High</p>
-                    <p className="floor-prices-txt">${props.puff24High.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 6})} USD</p>
+                    <p className="market-stats-txt">24h High</p>
+                    <p className="market-stats-txt">${props.puff24High.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 6})} USD</p>
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">24h Low</p>
-                    <p className="floor-prices-txt">${props.puff24Low.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 6})} USD</p>
+                    <p className="market-stats-txt">24h Low</p>
+                    <p className="market-stats-txt">${props.puff24Low.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 6})} USD</p>
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">ATH</p>
-                    <p className="floor-prices-txt">${props.puffAth.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 6})} USD</p>
+                    <p className="market-stats-txt">ATH</p>
+                    <p className="market-stats-txt">${props.puffAth.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 6})} USD</p>
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">% from ATH</p>
+                    <p className="market-stats-txt">% from ATH</p>
                     {percentChangeRender(props.puffAthChangePercent)}
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">ATL</p>
-                    <p className="floor-prices-txt">${props.puffAtl.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 6})} USD</p>
+                    <p className="market-stats-txt">ATL</p>
+                    <p className="market-stats-txt">${props.puffAtl.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 6})} USD</p>
                 </div>
                 <div className="market-stat-wrapper">
-                    <p className="floor-prices-txt">% from ATL</p>
+                    <p className="market-stats-txt">% from ATL</p>
                     {percentChangeRender(props.puffAtlChangePercent)}
                 </div>
             </div>     

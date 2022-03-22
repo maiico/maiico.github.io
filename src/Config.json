@@ -12,10 +12,14 @@
         },
         "magicEden": {
             "sac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getsacfloorprice",
-            "nac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getnacfloorprice"
+            "nac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getnacfloorprice",
+            "collectionStats": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getcollectionstats"
         },
         "sac": {
             "marketcap": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getpuffmarketcap"
+        },
+        "defi": {
+            "stats": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getdefirates"
         }
     },
     "rescueMissions": {

@@ -3,11 +3,9 @@ import './Dashboard.css';
 import config from '../../Config.json';
 import axios from 'axios';
 import PuffPrice from './components/puffPrice/PuffPrice';
-// import TokenPrices from './components/tokenPrices/TokenPrices';
 import TokenIncome from './components/tokenIncome/TokenIncome';
-import FloorPrices from './components/floorPrices/FloorPrices';
-// import RescueMissions from './components/rescueMissions/RescueMissions';
 import OwnedApes from './components/ownedApes/OwnedApes';
+import Floor from './components/floor/Floor';
 import Defi from './components/defi/Defi';
 
 function Dashboard() {
@@ -157,12 +155,6 @@ function Dashboard() {
             </div>
             <div className="dashboard-row">
                 <div className="dashboard-col">
-                    {/* <TokenPrices 
-                        solPriceUsd={solPriceUsd}
-                        solPriceCad={solPriceCad}
-                        puffPriceUsd={puffPriceUsd}
-                        puffPriceCad={puffPriceCad}
-                    /> */}
                     <TokenIncome 
                         puffIncome={puffIncome}
                         puffPriceUsd={puffPriceUsd}
@@ -174,28 +166,23 @@ function Dashboard() {
                     />
                 </div>
                 <div className="dashboard-col">
-                    <FloorPrices 
-                        sacFloorPrice={sacFloorPrice}
-                        sacTotalListed={sacTotalListed}
-                        nacFloorPrice={nacFloorPrice}
-                        nacTotalListed={nacTotalListed}
-                        solPriceUsd={solPriceUsd}
-                        solPriceCad={solPriceCad}
+                    <Defi 
                         puffPriceUsd={puffPriceUsd}
-                        puffPriceCad={puffPriceCad}
                     />
                 </div>
             </div>
-            {/* <div className="dashboard-row">
-                <Defi />
-                <RescueMissions 
+            <div className="dashboard-row">
+                <Floor 
+                    sacFloorPrice={sacFloorPrice}
+                    sacTotalListed={sacTotalListed}
                     nacFloorPrice={nacFloorPrice}
+                    nacTotalListed={nacTotalListed}
                     solPriceUsd={solPriceUsd}
                     solPriceCad={solPriceCad}
                     puffPriceUsd={puffPriceUsd}
                     puffPriceCad={puffPriceCad}
                 />
-            </div> */}
+            </div>
         </div>
     );
 }

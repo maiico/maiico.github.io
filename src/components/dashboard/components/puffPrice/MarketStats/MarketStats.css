@@ -43,6 +43,11 @@
   color: #77dd77;
 }
 
+.market-stats-txt {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 820px) {
   .market-stats {
     width: 100%;

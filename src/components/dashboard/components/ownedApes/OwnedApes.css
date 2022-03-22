@@ -113,6 +113,7 @@
   height: auto;
   width: 49px;
   border-radius: 50%;
+  margin-right: 0.5rem;
 }
 .owned-apes-heading {
   font-size: 1.25rem;
@@ -123,6 +124,11 @@
 
 .owned-apes-txt {
   color: #dddddd;
+  font-size: 1rem;
+}
+
+.collection-subheader {
+  color: #14f195;
   font-size: 1rem;
 }
 

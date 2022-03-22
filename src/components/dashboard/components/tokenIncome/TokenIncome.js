@@ -12,14 +12,14 @@ function TokenIncome(props) {
                     <div className="token-day-wrapper">
                         <div className="token-name-wrapper">
                             <img src={Puff} className="token-logo" alt="solana"/>
-                            <p className="token-income-txt">$PUFF</p>
+                            <p className="token-income-subheading">$PUFF</p>
                         </div>
                     </div>
                     <div className="token-amount-wrapper">
-                        <p className="token-income-txt">Amount</p>
+                        <p className="token-income-subheading">Amount</p>
                     </div>
                     <div className="token-value-wrapper">
-                        <p className="token-income-txt">Value</p>
+                        <p className="token-income-subheading">Value</p>
                     </div>
                 </div>
                 <div className="token-income-wrapper">
@@ -99,14 +99,14 @@ function TokenIncome(props) {
                     <div className="token-day-wrapper">
                         <div className="token-name-wrapper">
                             <img src={All} className="token-logo" alt="solana"/>
-                            <p className="token-income-txt">$ALL</p>
+                            <p className="token-income-subheading">$ALL</p>
                         </div>
                     </div>
                     <div className="token-amount-wrapper">
-                        <p className="token-income-txt">Amount</p>
+                        <p className="token-income-subheading">Amount</p>
                     </div>
                     <div className="token-value-wrapper">
-                        <p className="token-income-txt">Value</p>
+                        <p className="token-income-subheading">Value</p>
                     </div>
                 </div>
                 <div className="token-income-wrapper">
