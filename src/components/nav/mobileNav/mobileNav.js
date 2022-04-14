@@ -1,5 +1,6 @@
 import './mobileNav.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function mobileNav(props) {
 
@@ -20,9 +21,12 @@ function mobileNav(props) {
   return (
     <div className={mobileNavClass}>
         <ul className="nav-links-mobile">
-            <li className="nav-list-item">
-                <button className="mobile-nav-btn" onClick={() => showInfo(true) }>Info</button>
-            </li>
+                <Link to="/info">
+                    <li className="nav-list-item">
+                        {/* <button className="nav-btn" onClick={() => {showInfo(true)}}>Info</button> */}
+                            <button className="mobile-nav-btn">Info</button>
+                    </li>
+                </Link>
             <li className="nav-list-item">
                 <a href="https://raydium.io/swap/?from=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amp;to=G9tt98aYSznRk7jWsfuz9FnTdokxS6Brohdo9hSmjTRB" target="_blank" rel="noreferrer nofollow">
                     <button className="mobile-nav-btn">Buy $PUFF</button>

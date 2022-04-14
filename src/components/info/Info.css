@@ -2,41 +2,68 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
-  z-index: 200;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   height: auto;
-  width: auto;
-  max-width: 600px;
+  width: 100%;
+  max-width: 1200px;
   margin: auto;
-  background: #0e1111;
-  border-radius: 25px;
+  background: #000000;
   padding: 1rem;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .info-content-wrapper {
   display: flex;
   flex-direction: column;
   text-align: left;
+  justify-content: left;
+  align-items: center;
   height: auto;
   width: 100%;
 }
 
-.team-wrapper {
+.intro-wrapper {
   display: flex;
   flex-direction: row;
   height: auto;
   width: 100%;
-  text-align: center;
+  background-color: #0e1111;
+  border-radius: 15px;
   align-items: top;
-  justify-content: space-between;
+  justify-content: top;
+}
+
+.intro-txt-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 80%;
+  padding: 1rem;
+}
+
+.team-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   margin: auto;
+  margin-bottom: 5rem;
+}
+
+.team-members-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  justify-content: center;
 }
 
 .info-heading {
-  font-size: 1.25rem;
+  font-size: 2rem;
   background: -webkit-linear-gradient(left, #9945ff, #14f195);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -44,7 +71,7 @@
 
 .name-heading {
   font-size: 1.25rem;
-  color: #dddddd;
+  color: #14f195;
   margin: auto;
 }
 
@@ -53,11 +80,29 @@
   font-size: 1rem;
 }
 
+.professor-puff-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.professor-puff {
+  height: auto;
+  width: 8rem;
+  border-radius: 50%;
+  margin: auto;
+}
+
 .team-avatar {
   height: auto;
   width: 8rem;
   border-radius: 50%;
   margin: auto;
+  margin-bottom: 1rem;
 }
 
 .twitter-icon {
@@ -66,23 +111,25 @@
   padding: 2rem;
 }
 
-.built-by-wrapper {
+.team-member {
   display: flex;
   flex-direction: column;
   height: auto;
-  width: 50%;
+  width: 12rem;
+  background-color: #0e1111;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-right: 1rem;
 }
 
 .support-project-wrapper {
   display: flex;
   flex-direction: column;
   height: auto;
-  width: 50%;
-  text-align: left;
-  justify-content: left;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
   align-items: center;
-  padding-right: 1rem;
-  padding-left: 1rem;
 }
 
 .wallet-copy-wrapper {
@@ -90,6 +137,7 @@
   flex-direction: row;
   height: auto;
   width: 100%;
+  justify-content: center;
 }
 
 .wallet-address-wrapper {
@@ -141,6 +189,25 @@
 @media screen and (max-width: 480px) {
   .info {
     width: 85%;
+  }
+
+  .intro-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .professor-puff-wrapper {
+    width: 100%;
+  }
+
+  .team-members-wrapper {
+    flex-direction: column;
+  }
+
+  .team-member {
+    margin: auto;
+    margin-bottom: 1rem;
   }
 
   .team-wrapper {

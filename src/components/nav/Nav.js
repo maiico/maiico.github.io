@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Nav.css';
 import Logo from '../images/puffalytics-logo.png';
 import MobileNav from './mobileNav/mobileNav';
+import { Link } from 'react-router-dom';
 
 function Nav(props) {
     //display bars or x
@@ -24,13 +25,19 @@ function Nav(props) {
     return ( 
         <div className="nav">
             <div className="nav-content">
-                <img src={Logo} className="puffalytics-logo" alt="Puffalytics"/>
+                <Link to="/">
+                    <img src={Logo} className="puffalytics-logo" alt="Puffalytics"/>
+                </Link>
+                
                 {barsClicked ? <i className="fa-solid fa-x fa-xl bars-icon" onClick={() => handleClick(false)}></i> 
                     : <i className="fa-solid fa-bars fa-2xl bars-icon" onClick={() => handleClick(true)}></i>}
                 <ul className="nav-list">
+                <Link to="/info">
                     <li className="nav-list-item">
-                        <button className="nav-btn" onClick={() => {showInfo(true)}}>Info</button>
+                        {/* <button className="nav-btn" onClick={() => {showInfo(true)}}>Info</button> */}
+                            <button className="nav-btn">Info</button>
                     </li>
+                </Link>
                     <li className="nav-list-item">
                         <a href="https://raydium.io/swap/?from=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amp;to=G9tt98aYSznRk7jWsfuz9FnTdokxS6Brohdo9hSmjTRB" target="_blank" rel="noreferrer nofollow">
                             <button className="nav-btn">Buy $PUFF</button>
