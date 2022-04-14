@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.34d89d62.css",
-    "main.js": "/static/js/main.5d1d7d92.js",
+    "main.css": "/static/css/main.2d563678.css",
+    "main.js": "/static/js/main.e019a9fe.js",
     "static/media/pooingcat-avatar.png": "/static/media/pooingcat-avatar.3728e64638936229ccb4.png",
     "static/media/bongheads.png": "/static/media/bongheads.cfe660c2809ca021d7b5.png",
     "static/media/nac.png": "/static/media/nac.67b0f348237be48272b9.png",
@@ -17,11 +17,11 @@
     "static/media/puffalytics-logo.png": "/static/media/puffalytics-logo.4166c795cafcc2e5fa29.png",
     "static/media/orca.png": "/static/media/orca.1108d3fd3ec100ea8966.png",
     "index.html": "/index.html",
-    "main.34d89d62.css.map": "/static/css/main.34d89d62.css.map",
-    "main.5d1d7d92.js.map": "/static/js/main.5d1d7d92.js.map"
+    "main.2d563678.css.map": "/static/css/main.2d563678.css.map",
+    "main.e019a9fe.js.map": "/static/js/main.e019a9fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.34d89d62.css",
-    "static/js/main.5d1d7d92.js"
+    "static/css/main.2d563678.css",
+    "static/js/main.e019a9fe.js"
   ]
 }
