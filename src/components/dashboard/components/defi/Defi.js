@@ -135,7 +135,7 @@ if(raydiumPuffUsdc.liquidity === 0) {
                                 <p className="dex-txt">-</p>
                             </div>
                             <div className="defi-stat-wrapper">
-                                <p className="dex-txt">{orcaPuffSol.apy_7d.toFixed(2)}%</p>
+                                <p className="dex-txt">{orcaPuffSol.apy_7d.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}%</p>
                             </div>
                         </div>
                         <div className="dex-headings-wrapper">
@@ -150,7 +150,7 @@ if(raydiumPuffUsdc.liquidity === 0) {
                                 <p className="dex-txt">${FormatLargeNumbers(raydiumAllSol.volume7d)}</p>
                             </div>
                             <div className="defi-stat-wrapper">
-                                <p className="dex-txt">${(FormatLargeNumbers(raydiumAllSol.fee7d)).toFixed(2)}</p>
+                                <p className="dex-txt">${(FormatLargeNumbers(raydiumAllSol.fee7d)).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
                             </div>
                             <div className="defi-stat-wrapper">
                                 <p className="dex-txt">{raydiumAllSol.apr7d}%</p>
