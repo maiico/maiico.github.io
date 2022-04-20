@@ -2,7 +2,7 @@ import React from 'react';
 import './Info.css';
 import TruccosAvatar from '../images/truccos-avatar.png';
 import PooingcatAvatar from '../images/pooingcat-avatar.png';
-import PierreAvatar from '../images/pierre-avatar.png';
+import PierreAvatar from '../images/pierre-avatar-420.png';
 import ProfessforPuffAvatar from '../images/professorpuff-avatar.png';
 
 function Info(props) {
