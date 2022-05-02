@@ -2,7 +2,6 @@ import React from 'react';
 import './Info.css';
 import TruccosAvatar from '../images/truccos-avatar.png';
 import PooingcatAvatar from '../images/pooingcat-avatar.png';
-import PierreAvatar from '../images/pierre-avatar-420.png';
 import MxtryAvatar from '../images/mxtry-avatar.png';
 import ProfessforPuffAvatar from '../images/professorpuff-avatar.png';
 
@@ -63,14 +62,6 @@ function Info(props) {
                             <h3 className="name-heading">Pooingcat</h3>
                             <p className="info-txt">Community / Analyst</p>
                             <a href="https://twitter.com/Pooingcat" target="_blank" rel="noreferrer nofollow">
-                                <i className="fa-brands fa-twitter fa-2xl twitter-icon"></i>
-                            </a>
-                        </div>
-                        <div className="team-member">
-                            <img src={PierreAvatar} className="team-avatar" alt="truccos"/>
-                            <h3 className="name-heading">Pierre</h3>
-                            <p className="info-txt">Analyst</p>
-                            <a href="https://twitter.com/pierrenft_" target="_blank" rel="noreferrer nofollow">
                                 <i className="fa-brands fa-twitter fa-2xl twitter-icon"></i>
                             </a>
                         </div>
