@@ -4,7 +4,7 @@ import './Defi.css';
 import Raydium from '../../../images/raydium.png';
 import Orca from '../../../images/orca.png';
 import Config from '../../../../Config.json';
-import FormatLargeNumbers from '../helperFunctions/FormatLargeNumbers';
+import FormatLargeNumbers from '../../../helperFunctions/FormatLargeNumbers';
 import Loading from '../../../loading/Loading';
 
 function Defi(props) {

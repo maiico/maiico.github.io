@@ -1,0 +1,121 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 1150px;
+    padding: 1rem;
+    background-color: #0e1111;
+    border-radius: 25px;
+    text-align: left;
+    margin: 0.5rem;
+  }
+
+  .projects-list-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    overflow: scroll;
+  }
+  
+  .projects-heading-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    align-items: left;
+    justify-content: left;
+  }
+  
+  .projects-chart-headers {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    border-color: #333333;
+  }
+  
+  .projects-chart-project-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20%;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+  }
+  
+  .projects-chart-stat-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .projects-headers-txt {
+    font-size: 1rem;
+    color: darkgray;
+  }
+  
+  .projects-heading {
+    font-size: 1.25rem;
+    background: -webkit-linear-gradient(left, #12c2e9, #c471ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+/* iPhone XR, 12 */
+@media screen and (max-width: 414px) { 
+  .projects {
+    width: 85%;
+    padding: 1rem;
+  }
+
+  .projects-headers-txt {
+    font-size: 0.75rem;
+  }
+  }
+  
+/* Samsung */
+@media screen and (max-width: 365px) { 
+  .projects {
+    width: 85%;
+    padding: 1rem;
+    overflow-x: scroll;
+  }
+
+  .projects-headers-txt {
+    font-size: 0.75rem;
+  }
+}
+  
+/* iPad pro */
+@media screen and (max-width: 1024px) { 
+  .projects {
+    width: 85%;
+    padding: 1rem;
+    overflow-x: scroll;
+  }
+
+  .projects-headers-txt {
+    font-size: 0.75rem;
+  }
+}
+  
+/* iPad air */
+@media screen and (max-width: 820px) { 
+  .projects {
+    width: 90%;
+    padding: 1rem;
+    overflow-x: scroll;
+  }
+
+  .projects-headers-txt {
+    font-size: 0.75rem;
+  }
+}

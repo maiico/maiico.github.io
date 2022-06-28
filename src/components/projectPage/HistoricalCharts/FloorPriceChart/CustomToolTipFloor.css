@@ -1,0 +1,17 @@
+.custom-tooltip-floor {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 125px;
+    padding: 1rem;
+  }
+  
+  .tooltip-label-floor {
+    color: darkgray;
+    font-size: 0.75rem;
+  }
+  
+  .tooltip-value-floor {
+    color: darkgray;
+    font-size: 0.75rem;
+  }

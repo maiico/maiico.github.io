@@ -91,7 +91,7 @@
   text-align: center;
   border-style: none;
   border-radius: 25px;
-  background: linear-gradient(90deg, #9945ff 0%, #14f195 100%);
+  background: linear-gradient(#c471ed, #12c2e9);
   color: #ffffff;
   font-weight: bold;
   margin: auto;
@@ -117,9 +117,7 @@
 }
 .owned-apes-heading {
   font-size: 1.25rem;
-  background: -webkit-linear-gradient(left, #9945ff, #14f195);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #c471ed
 }
 
 .owned-apes-txt {
@@ -128,7 +126,7 @@
 }
 
 .collection-subheader {
-  color: #14f195;
+  color: #12c2e9;
   font-size: 1rem;
 }
 

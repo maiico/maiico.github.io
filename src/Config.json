@@ -5,7 +5,8 @@
             "puff": "https://api.coingecko.com/api/v3/coins/puff?market_data=true",
             "chartData24hr": "https://api.coingecko.com/api/v3/coins/puff/market_chart?vs_currency=usd&days=1",
             "chartData7d": "https://api.coingecko.com/api/v3/coins/puff/market_chart?vs_currency=usd&days=7",
-            "chartData30d": "https://api.coingecko.com/api/v3/coins/puff/market_chart?vs_currency=usd&days=30"
+            "chartData30d": "https://api.coingecko.com/api/v3/coins/puff/market_chart?vs_currency=usd&days=30",
+            "solPriceUsd": "https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd"
         },
         "solScan": {
             "all": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getallprice"
@@ -13,13 +14,18 @@
         "magicEden": {
             "sac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getsacfloorprice",
             "nac": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getnacfloorprice",
-            "collectionStats": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getcollectionstats"
+            "collectionStats": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getcollectionslist/"
         },
         "sac": {
             "marketcap": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getpuffmarketcap"
         },
         "defi": {
             "stats": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getdefirates"
+        },
+        "puffalytics": {
+            "collectionDetails": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getcollectiondetails/",
+            "collectionCurrentStats": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getcurrentcollectionstats/",
+            "collectionHistoricalStats": "https://qi8ok3f41j.execute-api.ca-central-1.amazonaws.com/prod/getcollectionhistorical/"
         }
     },
     "rescueMissions": {

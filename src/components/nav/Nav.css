@@ -27,7 +27,7 @@
 
 .puffalytics-logo {
   height: auto;
-  width: 300px;
+  width: 275px;
   z-index: 100;
 }
 
@@ -56,7 +56,7 @@
   text-align: center;
   border-style: none;
   border-radius: 25px;
-  background: linear-gradient(90deg, #9945ff 0%, #14f195 100%);
+  background: linear-gradient(#c471ed, #12c2e9);
   color: #ffffff;
   font-weight: bold;
   margin: auto;

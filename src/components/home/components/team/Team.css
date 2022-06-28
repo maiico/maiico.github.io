@@ -1,0 +1,118 @@
+  .team-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .team-heading {
+    background: -webkit-linear-gradient(left, #12c2e9, #c471ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    margin: auto;
+  }
+
+  .team-txt {
+    color: darkgray;
+    font-size: 0.9rem;
+    margin: auto;
+  }
+  
+  .team-members-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .team-avatar {
+    height: auto;
+    width: 8rem;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .team-name-heading {
+    color: #c471ed;
+    font-size: 1rem;
+  }
+  
+  .socials-container {
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    width: 100%;
+  }
+  
+  .twitter-icon {
+    color: #1da1f2;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 12rem;
+    background-color: #0e1111;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-right: 1rem;
+  }
+
+  /* iPhone XR, 12 */
+@media screen and (max-width: 414px) { 
+.team-members-wrapper {
+  flex-direction: column;
+}
+
+.team-member {
+  margin: auto;
+  margin-bottom: 1rem;
+  width: 85%;
+  padding: 1rem;
+}
+}
+  
+/* Samsung */
+@media screen and (max-width: 365px) { 
+  .team-members-wrapper {
+    flex-direction: column;
+  }
+  
+  .team-member {
+    margin: auto;
+    margin-bottom: 1rem;
+    width: 85%;
+    padding: 1rem;
+  }
+}
+  
+/* iPad pro */
+@media screen and (max-width: 1024px) { 
+.team-member {
+  width: 10rem;
+}
+
+.team-avatar {
+  width: 5rem;
+}
+}
+  
+/* iPad air and mini */
+@media screen and (max-width: 820px) { 
+  .team-member {
+    width: 9rem;
+  }
+}

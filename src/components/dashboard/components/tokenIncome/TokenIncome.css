@@ -16,9 +16,7 @@
 
 .token-income-heading {
   font-size: 1.25rem;
-  background: -webkit-linear-gradient(left, #9945ff, #14f195);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #c471ed
 }
 
 .token-wrapper {
@@ -98,7 +96,7 @@
 }
 
 .token-income-subheading {
-  color: #14f195;
+  color: darkgray;
   font-size: 1rem;
 }
 

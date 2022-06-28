@@ -105,6 +105,13 @@
   margin-bottom: 1rem;
 }
 
+.socials-container {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  width: 100%;
+}
+
 .twitter-icon {
   color: #1da1f2;
   margin: auto;

@@ -1,0 +1,120 @@
+.historical-charts {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+.historical-charts-row {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.historical-chart-container {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 555px;
+    background-color:#0e1111;
+    border-radius: 25px;
+    padding: 1rem;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.historical-charts-heading {
+    font-size: 1rem;
+    background: -webkit-linear-gradient(left, #12c2e9, #c471ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* iPhone SE */
+@media screen and (max-width: 375px) { 
+    
+    .historical-charts-row {
+        flex-direction: column;
+    }
+    
+    .historical-chart-container {
+        width: 300px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .historical-charts-row {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    }
+
+
+/* iPhone XR, 12 */
+@media screen and (max-width: 414px) { 
+.historical-charts-row {
+    flex-direction: column;
+}
+
+.historical-chart-container {
+    width: 345px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.historical-charts-row {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+}
+
+/* Samsung */
+@media screen and (max-width: 365px) { 
+    .historical-charts-row {
+        flex-direction: column;
+    }
+    
+    .historical-chart-container {
+        width: 315px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .historical-charts-row {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
+
+/* iPad pro */
+@media screen and (max-width: 1024px) { 
+    .historical-chart-container {
+        width: 450px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* iPad air */
+@media screen and (max-width: 820px) { 
+    .historical-chart-container {
+        width: 365px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* iPad mini */
+@media screen and (max-width: 768px) { 
+    .historical-chart-container {
+        width: 340px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}

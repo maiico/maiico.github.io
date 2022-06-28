@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import config from '../../../../../Config.json';
-import MutateChartData from '../../helperFunctions/MutateChartData';
+import MutateChartData from '../../../../helperFunctions/MutateChartData';
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import CustomToolTip from '../CustomToolTip/CustomToolTip';
 import Loading from '../../../../loading/Loading';

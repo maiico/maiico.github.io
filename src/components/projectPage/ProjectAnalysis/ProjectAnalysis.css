@@ -1,0 +1,100 @@
+.project-analysis {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 29.5%;
+    background-color:#0e1111;
+    border-radius: 25px;
+    padding: 1rem;
+    text-align: justify;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.analysis-puff-score-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.analysis-icon {
+    color: darkgray;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+.project-analysis-heading {
+    font-size: 1rem;
+    /* color: #9945ff; */
+    /* color: #c471ed; */
+    background: -webkit-linear-gradient(left, #12c2e9, #c471ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-analysis-txt {
+    font-size: 1rem;
+    color: darkgray;
+}
+
+.puffalytics-score-txt {
+    font-size: 1rem;
+    color: #14f195;
+}
+
+.project-analysis-list {
+    font-size: 1rem;
+    color: darkgray;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    list-style: none;
+}
+
+/* iphones */
+
+@media screen and (max-width: 414px) { 
+.project-analysis {
+    width: 345px;
+    margin-bottom: 1rem;
+}
+}
+
+/* Samsung */
+@media screen and (max-width: 360px) { 
+    .project-analysis {
+        width: 340px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* iPad pro */
+@media screen and (width: 1024px) { 
+    .project-analysis {
+        width: 280px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* iPad air */
+@media screen and (width: 820px) { 
+    .project-analysis {
+        width: 225px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* iPad mini */
+@media screen and (width: 768px) { 
+    .project-analysis {
+        width: 215px;
+        margin-bottom: 1rem;
+    }
+}

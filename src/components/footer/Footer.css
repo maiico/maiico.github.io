@@ -54,6 +54,10 @@
   margin-bottom: 3rem;
 }
 
+.footer-twitter-icon {
+  color: #353839;
+}
+
 @media screen and (max-width: 480px) {
   .footer-list {
     flex-direction: column;

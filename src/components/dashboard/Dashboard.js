@@ -171,18 +171,6 @@ function Dashboard() {
                     />
                 </div>
             </div>
-            <div className="dashboard-row">
-                <Floor 
-                    sacFloorPrice={sacFloorPrice}
-                    sacTotalListed={sacTotalListed}
-                    nacFloorPrice={nacFloorPrice}
-                    nacTotalListed={nacTotalListed}
-                    solPriceUsd={solPriceUsd}
-                    solPriceCad={solPriceCad}
-                    puffPriceUsd={puffPriceUsd}
-                    puffPriceCad={puffPriceCad}
-                />
-            </div>
         </div>
     );
 }

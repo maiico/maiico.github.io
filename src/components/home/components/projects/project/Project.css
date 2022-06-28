@@ -1,0 +1,214 @@
+.project {
+  display: flex;
+  flex-direction: row;
+  height: 5rem;
+  width: auto;
+  background-color: #0e1111;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #333333;
+}
+
+.project-chart-headers {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+
+.project-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 20%;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+}
+
+.project-chart-stat-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.project-score-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.project-score-mobile-wrapper {
+  display: none;
+}
+
+.project-name-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  justify-content: left;
+  align-items: left;
+  margin-left: 5rem;
+}
+
+.project-img {
+  height: auto;
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.project-heading {
+  color: #c471ed;
+  font-size: 0.95rem;
+}
+
+.project-prices-txt {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.project:hover {
+  background-color: #181818;
+  cursor: pointer;
+}
+
+/* iPhone XR, 12 */
+@media screen and (max-width: 414px) { 
+  .project {
+    height: 6rem;
+  }
+  .project-name-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .project-score-wrapper {
+    display: none;
+  }
+
+  .project-score-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-heading {
+    font-size: 0.75rem;
+  }
+
+  .project-prices-txt {
+    font-size: 0.75rem;
+  }
+
+  .project-img {
+    width: 25px;
+    margin: auto;
+  }
+  }
+  
+/* Samsung */
+@media screen and (max-width: 365px) { 
+  .project {
+    height: 6rem;
+  }
+  .project-name-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .project-score-wrapper {
+    display: none;
+  }
+
+  .project-score-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-heading {
+    font-size: 0.75rem;
+  }
+
+  .project-prices-txt {
+    font-size: 0.75rem;
+  }
+
+  .project-img {
+    width: 25px;
+    margin: auto;
+  }
+}
+  
+/* iPad pro */
+@media screen and (max-width: 1024px) { 
+
+}
+  
+/* iPad air and mini */
+@media screen and (max-width: 820px) { 
+  .project {
+    height: 6rem;
+  }
+  .project-name-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .project-score-wrapper {
+    display: none;
+  }
+
+  .project-score-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-heading {
+    font-size: 0.75rem;
+  }
+
+  .project-prices-txt {
+    font-size: 0.75rem;
+  }
+
+  .project-img {
+    width: 25px;
+    margin: auto;
+  }
+}
+  

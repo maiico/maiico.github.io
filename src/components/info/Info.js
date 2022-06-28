@@ -4,6 +4,7 @@ import TruccosAvatar from '../images/truccos-avatar.png';
 import PooingcatAvatar from '../images/pooingcat-avatar.png';
 import MxtryAvatar from '../images/mxtry-avatar.png';
 import ProfessforPuffAvatar from '../images/professorpuff-avatar.png';
+import AxgelaAvatar from '../images/axgela-avatar.PNG';
 
 function Info(props) {
 
@@ -53,33 +54,38 @@ function Info(props) {
                             <img src={TruccosAvatar} className="team-avatar" alt="truccos"/>
                             <h3 className="name-heading">Truccos</h3>
                             <p className="info-txt">Founder / Dev</p>
-                            <a href="https://twitter.com/TruccosHQ" target="_blank" rel="noreferrer nofollow">
-                                <i className="fa-brands fa-twitter fa-2xl twitter-icon"></i>
-                            </a>
+                            <div className="socials-container">
+                                <a href="https://twitter.com/TruccosHQ" target="_blank" rel="noreferrer nofollow">
+                                    <i className="fa-brands fa-twitter fa-2xl twitter-icon"></i>
+                                </a>
+                            </div>
                         </div>
                         <div className="team-member">
                             <img src={PooingcatAvatar} className="team-avatar" alt="truccos"/>
                             <h3 className="name-heading">Pooingcat</h3>
-                            <p className="info-txt">Community / Analyst</p>
-                            <a href="https://twitter.com/Pooingcat" target="_blank" rel="noreferrer nofollow">
-                                <i className="fa-brands fa-twitter fa-2xl twitter-icon"></i>
-                            </a>
+                            <p className="info-txt">Community</p>
+                            <div className="socials-container">
+                                <a href="https://twitter.com/Pooingcat" target="_blank" rel="noreferrer nofollow">
+                                    <i className="fa-brands fa-twitter fa-2xl twitter-icon"></i>
+                                </a>
+                            </div>
                         </div>
                         <div className="team-member">
                             <img src={MxtryAvatar} className="team-avatar" alt="truccos"/>
                             <h3 className="name-heading">mxtry</h3>
                             <p className="info-txt">Analyst</p>
-                            <a href="https://twitter.com/mxtry_" target="_blank" rel="noreferrer nofollow">
-                                <i className="fa-brands fa-twitter fa-2xl twitter-icon"></i>
-                            </a>
+                            <div className="socials-container">
+                                <a href="https://twitter.com/mxtry" target="_blank" rel="noreferrer nofollow">
+                                    <i className="fa-brands fa-twitter fa-2xl twitter-icon"></i>
+                                </a>
+                            </div>
                         </div>
                         <div className="team-member">
-                            <img src={ProfessforPuffAvatar} className="team-avatar" alt="truccos"/>
-                            <h3 className="name-heading">Professor Puff</h3>
-                            <p className="info-txt">Puffalytics Guide</p>
-                            <a href="https://twitter.com/TruccosHQ_" target="_blank" rel="noreferrer nofollow">
-                                <i className="fa-brands fa-twitter fa-2xl twitter-icon"></i>
-                            </a>
+                            <img src={AxgelaAvatar} className="team-avatar" alt="truccos"/>
+                            <h3 className="name-heading">axgela</h3>
+                            <p className="info-txt">Branding and Editor</p>
+                            <div className="socials-container">
+                            </div>
                         </div>
                     </div>
                 </div>

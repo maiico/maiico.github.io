@@ -26,7 +26,7 @@
   transform: translateX(0);
   transition: 0.5s ease-in;
   border-bottom-style: solid;
-  border-color: #14f195;
+  border-color: darkgray;
   border-width: 2px;
   margin-top: 3.5rem;
 }
@@ -56,7 +56,7 @@
   text-align: center;
   border-style: none;
   border-radius: 25px;
-  background: linear-gradient(90deg, #9945ff 0%, #14f195 100%);
+  background: linear-gradient(#c471ed, #12c2e9);
   color: #ffffff;
   font-weight: bold;
   margin: auto;
