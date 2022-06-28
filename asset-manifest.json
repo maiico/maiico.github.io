@@ -1,27 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.ae91e1e9.css",
-    "main.js": "/static/js/main.7840a1b2.js",
+    "main.css": "/static/css/main.8919568e.css",
+    "main.js": "/static/js/main.ac069414.js",
     "static/media/pooingcat-avatar.png": "/static/media/pooingcat-avatar.3728e64638936229ccb4.png",
-    "static/media/bongheads.png": "/static/media/bongheads.cfe660c2809ca021d7b5.png",
+    "static/media/axgela-avatar.PNG": "/static/media/axgela-avatar.041d77d076f99291894b.PNG",
     "static/media/nac.png": "/static/media/nac.67b0f348237be48272b9.png",
-    "static/media/mary-janes.png": "/static/media/mary-janes.7ee0db64572e710153b6.png",
+    "static/media/nftchev-avatar.jpeg": "/static/media/nftchev-avatar.69a9709c798164879f46.jpeg",
+    "static/media/puffalytics-logo-only.png": "/static/media/puffalytics-logo-only.3db98366eddf1f88c11a.png",
     "static/media/best-buds.png": "/static/media/best-buds.ef13eb43acfcc191a9ea.png",
     "static/media/mxtry-avatar.png": "/static/media/mxtry-avatar.50da56945148b8f80bd1.png",
     "static/media/truccos-avatar.png": "/static/media/truccos-avatar.2b2b7e8c466b77a9b2f2.png",
     "static/media/sac.png": "/static/media/sac.46ef38d6c1e947224f1f.png",
     "static/media/professorpuff-avatar.png": "/static/media/professorpuff-avatar.7e40e1eb2b7841388671.png",
+    "static/media/puffalytics-logo.png": "/static/media/puffalytics-logo.564e3bf0304637d6de37.png",
     "static/media/all-logo.png": "/static/media/all-logo.9b2537333a38e00d4c4e.png",
     "static/media/raydium.png": "/static/media/raydium.6c51eee5f5db13c19cac.png",
     "static/media/puff-logo.jpeg": "/static/media/puff-logo.c824e59348e033aa0986.jpeg",
-    "static/media/puffalytics-logo.png": "/static/media/puffalytics-logo.4166c795cafcc2e5fa29.png",
     "static/media/orca.png": "/static/media/orca.1108d3fd3ec100ea8966.png",
+    "static/media/puff-icon-dark.png": "/static/media/puff-icon-dark.68fa12c63b513865e74d.png",
+    "static/media/puff-icon.png": "/static/media/puff-icon.b2863522297d1bd53bbd.png",
     "index.html": "/index.html",
-    "main.ae91e1e9.css.map": "/static/css/main.ae91e1e9.css.map",
-    "main.7840a1b2.js.map": "/static/js/main.7840a1b2.js.map"
+    "main.8919568e.css.map": "/static/css/main.8919568e.css.map",
+    "main.ac069414.js.map": "/static/js/main.ac069414.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae91e1e9.css",
-    "static/js/main.7840a1b2.js"
+    "static/css/main.8919568e.css",
+    "static/js/main.ac069414.js"
   ]
 }
