@@ -208,31 +208,31 @@ function OwnedApes(props) {
     const calculatePuffIncome = () => {
 
         //sac
-        const chimpion = chimpionCount * 15
-        const chimpionAwakened = chimpionAwakenedCount * 30
-        const chimpionShockwave = chimpionShockwaveCount * 60
-        const evolvedChimpionShockwave = evolvedChimpionShockwaveCount * 120
-        const role = roleCount * 30
-        const roleAwakened = roleAwakenedCount * 60
-        const roleShockwave = roleShockwaveCount * 120
-        const sealz = sealzCount * 142
-        const sealzAwakened = sealzAwakenedCount * 250
-        const sacLegendary = sacLegendaryCount * 169
-        const sacLegendaryAwakened = sacLegendaryAwakenedCount * 300
+        const chimpion = chimpionCount * 10.2
+        const chimpionAwakened = chimpionAwakenedCount * 20.4
+        const chimpionShockwave = chimpionShockwaveCount * 40.8
+        const evolvedChimpionShockwave = evolvedChimpionShockwaveCount * 81.6
+        const role = roleCount * 20.4
+        const roleAwakened = roleAwakenedCount * 40.8
+        const roleShockwave = roleShockwaveCount * 81.6
+        const sealz = sealzCount * 96.56
+        const sealzAwakened = sealzAwakenedCount * 183.6
+        const sacLegendary = sacLegendaryCount * 114.92
+        const sacLegendaryAwakened = sacLegendaryAwakenedCount * 204
 
         //nac
-        const common = commonCount * 3
-        const commonAwakened = commonAwakenedCount * 9
-        const commonShockwave = commonShockwaveCount * 15
-        const rare = rareCount * 7
-        const rareAwakened = rareAwakenedCount * 18
-        const rareShockwave = rareShockwaveCount * 30
-        const epic = epicCount * 16
-        const epicAwakened = epicAwakenedCount * 30
-        const mystic = mysticCount * 36
-        const mysticAwakened = mysticAwakenedCount * 70
-        const nacLegendary = nacLegendaryCount * 69
-        const nacLegendaryAwakened = nacLegendaryAwakenedCount * 142
+        const common = commonCount * 2.04
+        const commonAwakened = commonAwakenedCount * 6.12
+        const commonShockwave = commonShockwaveCount * 10.2
+        const rare = rareCount * 4.76
+        const rareAwakened = rareAwakenedCount * 12.24
+        const rareShockwave = rareShockwaveCount * 20.4
+        const epic = epicCount * 10.88
+        const epicAwakened = epicAwakenedCount * 20.4
+        const mystic = mysticCount * 24.48
+        const mysticAwakened = mysticAwakenedCount * 47.6
+        const nacLegendary = nacLegendaryCount * 46.92
+        const nacLegendaryAwakened = nacLegendaryAwakenedCount * 96.56
 
 
         const totalPuffIncome = 
