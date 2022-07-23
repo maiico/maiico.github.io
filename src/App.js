@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home';
 import Dashboard from './components/dashboard/Dashboard';
 import Nav from './components/nav/Nav';
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Nav setShowBackDrop={setShowBackDrop} setShowInfo={setShowInfo}/>
         <Routes>
           <Route path="/" element={<Home />}/>
@@ -28,7 +28,7 @@ function App() {
           <Route path="project/:symbol" element={<ProjectPage />} />
         </Routes>
         <Footer setShowBackDrop={setShowBackDrop} setShowInfo={setShowInfo} />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
