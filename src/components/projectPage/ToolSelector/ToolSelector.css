@@ -1,0 +1,63 @@
+.tool-selector {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.selector-wrapper-selected {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-color: #ffffff;
+    border-width: 3px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.selector-wrapper-unselected {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
+    border-width: 3px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.selector-icon-selected {
+    color: #ffffff;
+    margin: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.selector-icon-unselected {
+    color: #404040;
+    margin: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+.selector-heading-selected{
+    color: #ffffff;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.selector-heading-unselected {
+    color: #404040;
+    font-size: 1rem;
+    margin: auto;
+}

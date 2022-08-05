@@ -94,7 +94,7 @@ function TokenIncome(props) {
                     </div>
                 </div>
             </div>        
-            <div className="token-wrapper">
+            {/* <div className="token-wrapper">
                 <div className="token-income-wrapper">
                     <div className="token-day-wrapper">
                         <div className="token-name-wrapper">
@@ -183,7 +183,7 @@ function TokenIncome(props) {
                         </p>
                     </div>
                 </div>
-            </div>        
+            </div>         */}
         </div>
      );
 }

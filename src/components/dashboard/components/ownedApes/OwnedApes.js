@@ -567,7 +567,7 @@ function OwnedApes(props) {
                             </div>
                         </div>
                 </div>
-                <div className="owned-collection-wrapper">
+                {/* <div className="owned-collection-wrapper">
                     <div className="collection-heading-wrapper">
                         <img src={BestBuds} className="collection-img" alt="Stoned Ape Crew" />
                         <h2 className="collection-subheader">BestBuds / MaryJanes</h2>
@@ -588,7 +588,7 @@ function OwnedApes(props) {
                                 <button className="owned-input-btn" onClick={() => addApe("maryJanes")}>+</button>
                             </div>
                         </div>
-                </div>
+                </div> */}
             </div>
             <div className="owned-apes-btn-wrapper">
                 <button className="calculate-btn" onClick={() => calculateIncome()}>Puff Puff Stats</button>

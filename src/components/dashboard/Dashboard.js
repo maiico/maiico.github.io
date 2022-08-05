@@ -165,11 +165,11 @@ function Dashboard() {
                         fiatCurrency={'USD'}
                     />
                 </div>
-                <div className="dashboard-col">
+                {/* <div className="dashboard-col">
                     <Defi 
                         puffPriceUsd={puffPriceUsd}
                     />
-                </div>
+                </div> */}
             </div>
         </div>
     );

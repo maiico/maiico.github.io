@@ -2,7 +2,7 @@ import React from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import moment from 'moment';
 import CustomToolTipVolume from './CustomToolTipVolume';
-import Loading from '../../../loading/Loading';
+import Loading from '../../../../loading/Loading';
 
 function VolumeChart(props) {
 

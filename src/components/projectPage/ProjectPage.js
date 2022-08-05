@@ -4,9 +4,10 @@ import axios from 'axios';
 import config from '../../Config.json';
 import { useParams } from 'react-router-dom'
 import ProjectHeader from './projectHeader/ProjectHeader';
-import ProjectPageStat from './projectPageStat/ProjectPageStat';
-import ProjectAnalysis from './ProjectAnalysis/ProjectAnalysis';
-import HistoricalCharts from './HistoricalCharts/HistoricalCharts';
+import ToolSelector from './ToolSelector/ToolSelector';
+import Market from './Market/Market';
+import Insights from './Insights/Insights';
+
 
 function ProjectPage(props) {
 
@@ -38,6 +39,24 @@ function ProjectPage(props) {
         listedCount: 0
     });
     const [solPrice, setSolPrice] = useState(0);
+    const [market, setMarket] = useState(true);
+    const [insights, setInsights] = useState(false);
+
+    // function to set which page is selected
+   const pageSelector = ((selectedPage) => {
+        {
+            switch(selectedPage) {
+                case "market":
+                    setMarket(true)
+                    setInsights(false)
+                    break;
+                case "insights":
+                    setMarket(false)
+                    setInsights(true)
+                    break;
+            }
+        }
+    })
 
     const symbol = useParams()
 
@@ -80,86 +99,38 @@ function ProjectPage(props) {
                 overallScore={projectDetails.overallScore}
                 analyst={projectDetails.analyst}
             />
-            <div className="project-stats-container">
-                <div className="project-stats-row">
-                    <ProjectPageStat 
-                        heading={"Floor"}
-                        firstStat={currentCollectionStats.floorPrice}
-                        currency={" SOL"}
-                        secondStat={currentCollectionStats.floorPrice * solPrice}
-                        secondStatPreSymbol={"$"}
-                        secondStatPostSymbol={" USD"}
-                    />
-                    <ProjectPageStat 
-                        heading={"Total Volume"}
-                        firstStat={currentCollectionStats.volumeAll}
-                        currency={" SOL"}
-                        secondStat={currentCollectionStats.volumeAll * solPrice}
-                        secondStatPreSymbol={"$"}
-                        secondStatPostSymbol={" USD"}
-                    />
-                </div>
-                <div className="project-stats-row">
-                    <ProjectPageStat 
-                        heading={"Avg Sale Price"}
-                        firstStat={currentCollectionStats.avgPrice24hr}
-                        currency={" SOL"}
-                        secondStat={currentCollectionStats.avgPrice24hr * solPrice}
-                        secondStatPreSymbol={"$"}
-                        secondStatPostSymbol={" USD"}
-                    />
-                    <ProjectPageStat 
-                        heading={"Total Listed"}
-                        firstStat={currentCollectionStats.listedCount}
-                        currency={" / " + projectDetails.collectionCount.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})}
-                        secondStat={(currentCollectionStats.listedCount / projectDetails.collectionCount) * 100}
-                        secondStatPreSymbol={""}
-                        secondStatPostSymbol={"%"}
-                    />
-                </div>
-            </div>
-            <div className="historical-charts-container">
-                <HistoricalCharts 
+            <ToolSelector
+                pageSelector={pageSelector}
+                market={market}
+                insights={insights}
+            />
+            {market ?             
+                <Market
                     symbol={symbol.symbol}
                     floorPrice={currentCollectionStats.floorPrice}
+                    volumeAll={currentCollectionStats.volumeAll}
                     avgPrice24hr={currentCollectionStats.avgPrice24hr}
                     listedCount={currentCollectionStats.listedCount}
-                />
-            </div>
-            <div className="analysis-row">
-                <ProjectAnalysis 
-                    heading={"Artwork"}
-                    content={projectDetails.artTxt}
-                    score={projectDetails.artScore}
-                />
-                <ProjectAnalysis 
-                    heading={"Tokenomics"}
-                    content={projectDetails.tokenomicsTxt}
-                    score={projectDetails.tokenomicsScore}
-                />
-                <ProjectAnalysis 
-                    heading={"Team"}
-                    content={projectDetails.teamTxt}
-                    score={projectDetails.teamScore}
-                />
-            </div>
-            <div className="analysis-row">
-                <ProjectAnalysis 
-                    heading={"Community"}
-                    content={projectDetails.communityTxt}
-                    score={projectDetails.communityScore}
-                />
-                <ProjectAnalysis 
-                    heading={"Utility"}
-                    content={projectDetails.utilityTxt}
-                    score={projectDetails.utilityScore}
-                />
-                <ProjectAnalysis 
-                    heading={"Insights"}
-                    content={projectDetails.notesTxt}
-                    score={projectDetails.overallScore}
-                />
-            </div>
+                    collectionCount={projectDetails.collectionCount}
+                    solPrice={solPrice}
+                /> :
+                null}
+                {insights ?
+                    <Insights
+                        artTxt={projectDetails.artTxt}
+                        artScore={projectDetails.artScore}
+                        tokenomicsTxt={projectDetails.tokenomicsTxt}
+                        tokenomicsScore={projectDetails.tokenomicsScore}
+                        teamTxt={projectDetails.teamTxt}
+                        teamScore={projectDetails.teamScore}
+                        communityTxt={projectDetails.communityTxt}
+                        communityScore={projectDetails.communityScore}
+                        utilityTxt={projectDetails.utilityTxt}
+                        utilityScore={projectDetails.utilityScore}
+                        insightsTxt={projectDetails.notesTxt}
+                        insightsScore={projectDetails.overallScore} 
+                    /> :
+                    null}
         </div>
      );
 }

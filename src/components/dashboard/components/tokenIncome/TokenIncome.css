@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  min-height: 32rem;
   width: 87%;
   background-color: #0e1111;
   border-radius: 25px;

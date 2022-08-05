@@ -1,11 +1,11 @@
 import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid } from 'recharts';
 import moment from 'moment';
-import CustomToolTipListed from './CustomToolTipListed';
-import Loading from '../../../loading/Loading';
+import CustomToolTipAvgSale from './CustomToolTipAvgSale';
+import Loading from '../../../../loading/Loading';
 
 
-function ListedChart(props) {
+function AvgSalePriceChart(props) {
 
     //format date for y-axis
     const dateFormatter = (timeStamp) => {
@@ -13,6 +13,13 @@ function ListedChart(props) {
         const output = moment(timeStamp).format("DD");
 
         return output;
+    }
+
+    //format price
+    const priceFormatter = (price) => {
+        const formattedPrice = (price * 0.000000001).toFixed(2)
+
+        return formattedPrice;
     }
 
     if(props.chartData.length === 0) {
@@ -30,9 +37,9 @@ function ListedChart(props) {
               }}
             >
             <defs>
-                <linearGradient id="colorBlue" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#12c2e9" stopOpacity={0.1}/>
-                    <stop offset="95%" stopColor="#12c2e9" stopOpacity={0}/>
+                <linearGradient id="colorSale" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#14f195" stopOpacity={0.1}/>
+                    <stop offset="95%" stopColor="#14f195" stopOpacity={0}/>
                 </linearGradient>
             </defs>
               <XAxis
@@ -44,24 +51,25 @@ function ListedChart(props) {
                 stroke={"#353839"}
                />
               <YAxis 
-                dataKey="listedCount" 
+                dataKey="avgSalePrice" 
                 orientation={"right"} 
                 type="number" 
                 domain={["auto", "auto"]} 
+                tickFormatter={priceFormatter} 
                 axisLine={false}
                 tickLine={false}
                 stroke={"#353839"}
               />
               <Tooltip 
-                content={<CustomToolTipListed />}
+                content={<CustomToolTipAvgSale />}
               />
               <Area 
                 type="monotone" 
-                dataKey="listedCount" 
-                stroke="#12c2e9" 
+                dataKey="avgSalePrice" 
+                stroke="#14f195" 
                 strokeWidth="2"
                 fillOpacity={1} 
-                fill="url(#colorBlue)" 
+                fill="url(#colorSale)" 
               />
               <CartesianGrid 
                 vertical={false}
@@ -73,4 +81,4 @@ function ListedChart(props) {
     }
 }
 
-export default ListedChart;
+export default AvgSalePriceChart;

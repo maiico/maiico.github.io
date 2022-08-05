@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProjectAnalysis.css';
-import RenderPuffScore from '../../helperFunctions/RenderPuffScore';
-import Loading from '../../loading/Loading';
+import RenderPuffScore from '../../../helperFunctions/RenderPuffScore';
+import Loading from '../../../loading/Loading';
 
 function ProjectAnalysis(props) {
 

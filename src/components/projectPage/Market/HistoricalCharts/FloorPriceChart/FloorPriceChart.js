@@ -2,7 +2,7 @@ import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid } from 'recharts';
 import moment from 'moment';
 import CustomToolTipFloor from './CustomToolTipFloor';
-import Loading from '../../../loading/Loading';
+import Loading from '../../../../loading/Loading';
 
 
 function FloorPriceChart(props) {

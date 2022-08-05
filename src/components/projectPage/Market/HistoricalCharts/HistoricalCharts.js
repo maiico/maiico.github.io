@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import config from '../../../Config.json';
-import MutateFloorChartData from '../../helperFunctions/MutateFloorChartData';
-import MutateVolumeChartData from '../../helperFunctions/MutateVolumeChartData';
-import MutateListedChartData from '../../helperFunctions/MutateListedChartData';
-import MutateAvgSalePriceChartData from '../../helperFunctions/MutateAvgSalePriceChartData';
+import config from '../../../../Config.json';
+import MutateFloorChartData from '../../../helperFunctions/MutateFloorChartData';
+import MutateVolumeChartData from '../../../helperFunctions/MutateVolumeChartData';
+import MutateListedChartData from '../../../helperFunctions/MutateListedChartData';
+import MutateAvgSalePriceChartData from '../../../helperFunctions/MutateAvgSalePriceChartData';
 import FloorPriceChart from './FloorPriceChart/FloorPriceChart';
 import VolumeChart from './VolumeChart/VolumeChart';
 import ListedChart from './ListedChart/ListedChart';

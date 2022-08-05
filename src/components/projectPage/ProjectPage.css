@@ -8,60 +8,7 @@
     margin-bottom: 5rem;
 }
 
-.project-stats-container {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-    margin: auto;
-    padding-top: 1rem;
-    padding-bottom: 0.25rem;
-}
 
-.project-stats-row {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-}
-
-.historical-charts-container {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    margin: auto;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-}
-
-.analysis-row {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    justify-content: space-between;
-}
-
-
-/* mobile phones  */
-
-@media screen and (max-width: 414px) { 
-    .project-stats-container {
-        flex-direction: column;
-        padding-top: 0
-    }
-    .project-stats-row {
-        margin-top: 0.5rem;
-    }
-
-    .analysis-row {
-        flex-direction: column;
-        padding: 0;
-    }
-}
 
 
 
