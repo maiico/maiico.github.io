@@ -3,7 +3,7 @@
     flex-direction: column;
     height: auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: auto;
     align-items: center;
     margin-top: 5rem;
@@ -14,9 +14,12 @@
 .home-hero {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: auto;
     width: 100%;
     margin: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(to bottom right, #000000, #191e1f);
 }
 
 .home-content-container {
@@ -30,26 +33,96 @@
     margin: auto;
 }
 
+.home-txt-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+.hero-img-container {
+    display: flex;
+    height: 480px;
+    width: 100%;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+    z-index: 80;
+}
+
+.hero-img-1 {
+    height: 450px;
+    width: auto;
+    border-radius: 25px;
+    position: absolute;
+    border-style: solid;
+    border-color: #0e1111;
+    border-width: 2px;
+    z-index: 99;
+    top: 20%;
+    left: 30%;
+}
+
+.hero-img-2 {
+    height: 450px;
+    width: auto;
+    border-radius: 25px;
+    position: absolute;
+    border-style: solid;
+    border-color: #0e1111;
+    border-width: 2px;
+    z-index: 98;
+    top: 10%;
+    right: 30%;
+}
+
 .home-heading {
     background: -webkit-linear-gradient(left, #12c2e9, #c471ed);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 8rem;
+    font-size: 5rem;
     margin: auto;
+    padding-bottom: 1rem;
 }
 
 .home-subheading {
     color: #ffffff;
-    font-size: 20px;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    font-size: 1.5rem;
+    margin: auto;
+    padding-bottom: 1rem;
 }
 
 .home-subheading-2 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 100;
+    margin: auto;
+}
+
+.home-subheading-gradient {
     background: -webkit-linear-gradient(left, #12c2e9, #c471ed);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2rem;
+    margin: auto;
+    padding: 2rem;
+}
+
+.discover-button {
+    height: 35px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: none;
+    border-radius: 25px;
+    background: linear-gradient( to bottom right, #c471ed, #12c2e9);
+    color: #ffffff;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
 .discover-nfts-container {
@@ -60,6 +133,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 3rem;
 }
 
 .team {
@@ -75,22 +149,46 @@
 /* iPhone XR, 12 */
 @media screen and (max-width: 414px) { 
     .home-heading {
-        font-size: 3rem;
+        font-size: 1rem;
     }
 
     .home-subheading {
         font-size: 1rem;
     }
+
+    .home-subheading-2 {
+        font-size: 0.75rem;
     }
+
+    .hero-img-1 {
+        height: 300px;
+    }
+
+    .hero-img-2 {
+        height: 300px;
+    }
+}
     
 /* Samsung */
  @media screen and (max-width: 365px) { 
     .home-heading {
-        font-size: 3rem;
+        font-size: 1rem;
     }
 
     .home-subheading {
-        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .home-subheading-2 {
+        font-size: 0.75rem;
+    }
+
+    .hero-img-1 {
+        height: 300px;
+    }
+
+    .hero-img-2 {
+        height: 300px;
     }
 }
     
