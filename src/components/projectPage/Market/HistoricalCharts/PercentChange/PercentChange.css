@@ -1,0 +1,22 @@
+.percent-change {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.percent-change-txt-green {
+    color: #14f195;
+    font-size: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.percent-change-txt-red {
+    color: #ff6961;
+    font-size: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+}

@@ -7,10 +7,39 @@ import Loading from '../../../../loading/Loading';
 
 function AvgSalePriceChart(props) {
 
+  let chartData;
+
+  //dynamic chart data based on current view
+
+  switch(props.currentView) {
+    case "7d":
+      chartData = props.avgSalePrice7d
+      break;
+    case "14d":
+      chartData = props.avgSalePrice14d
+      break;
+    case "30d":
+      chartData = props.avgSalePrice30d
+      break;
+    default:
+      chartData = props.avgSalePrice7d
+  }
+
     //format date for y-axis
     const dateFormatter = (timeStamp) => {
 
-        const output = moment(timeStamp).format("DD");
+      let output;
+
+      switch(props.currentView) {
+        case "7d":
+          output = moment(timeStamp).format("DD");
+          break;
+        case "14d":
+          output = moment(timeStamp).format("DD");
+          break;
+        default: output = moment(timeStamp).format("MMM-DD");
+
+      }
 
         return output;
     }
@@ -22,13 +51,13 @@ function AvgSalePriceChart(props) {
         return formattedPrice;
     }
 
-    if(props.chartData.length === 0) {
+    if(chartData.length === 0) {
         return <Loading />;
     } else {
         return ( 
             <ResponsiveContainer height={"100%"} width={"100%"}>
             <AreaChart
-              data={props.chartData}
+              data={chartData}
               margin={{
                 top: 0,
                 right: 0,

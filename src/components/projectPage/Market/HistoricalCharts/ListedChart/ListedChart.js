@@ -7,21 +7,51 @@ import Loading from '../../../../loading/Loading';
 
 function ListedChart(props) {
 
+  let chartData;
+
+  //dynamic chart data based on current view
+
+  switch(props.currentView) {
+    case "7d":
+      chartData = props.listedCount7d
+      break;
+    case "14d":
+      chartData = props.listedCount14d
+      break;
+    case "30d":
+      chartData = props.listedCount30d
+      break;
+    default:
+      chartData = props.listedCount7d
+  }
+
+
     //format date for y-axis
     const dateFormatter = (timeStamp) => {
+      
+      let output;
 
-        const output = moment(timeStamp).format("DD");
+      switch(props.currentView) {
+        case "7d":
+          output = moment(timeStamp).format("DD");
+          break;
+        case "14d":
+          output = moment(timeStamp).format("DD");
+          break;
+        default: output = moment(timeStamp).format("MMM-DD");
+
+      }
 
         return output;
     }
 
-    if(props.chartData.length === 0) {
+    if(chartData.length === 0) {
         return <Loading />;
     } else {
         return ( 
             <ResponsiveContainer height={"100%"} width={"100%"}>
             <AreaChart
-              data={props.chartData}
+              data={chartData}
               margin={{
                 top: 0,
                 right: 0,

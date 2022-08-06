@@ -6,10 +6,39 @@ import Loading from '../../../../loading/Loading';
 
 function VolumeChart(props) {
 
+    let chartData;
+
+    //dynamic chart data based on current view
+
+    switch(props.currentView) {
+      case "7d":
+        chartData = props.volumeDaily7d
+        break;
+      case "14d":
+        chartData = props.volumeDaily14d
+        break;
+      case "30d":
+        chartData = props.volumeDaily30d
+        break;
+      default:
+        chartData = props.floorPrice7d
+    }
+
     //format date for y-axis
     const dateFormatter = (timeStamp) => {
 
-        const output = moment(timeStamp).format("DD");
+        let output;
+
+        switch(props.currentView) {
+          case "7d":
+            output = moment(timeStamp).format("DD");
+            break;
+          case "14d":
+            output = moment(timeStamp).format("DD");
+            break;
+          default: output = moment(timeStamp).format("MMM-DD");
+  
+        }
 
         return output;
     }
@@ -21,7 +50,7 @@ function VolumeChart(props) {
         return formattedPrice;
     }
 
-    if(props.chartData.length === 0) {
+    if(chartData.length === 0) {
         return (
             <Loading />
         );
@@ -29,7 +58,7 @@ function VolumeChart(props) {
         return ( 
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart
-                data={props.chartData}
+                data={chartData}
                 margin={{
                     top: 0,
                     right: 0,
