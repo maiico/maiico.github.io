@@ -1,33 +1,30 @@
 import React from 'react';
-import './Footer.css';
 import { Link } from 'react-router-dom';
 
 function Footer(props) {
 
     return ( 
-        <div className="footer">
-            <div className="footer-content">
-                <p className="footer-txt">&copy; Puffalytics</p>
-                <ul className="footer-list">
-                <Link to="/sactools" style={{ textDecoration: 'none' }}>
-                    <li className="footer-list-item">
-                        <p className="footer-link">SAC Tools</p>
-                    </li>
+        <div className="flex flex-col w-full min-h-[300px] z-100 text-center bg-[#0e1111]">
+            <p className="text-zinc-800 mx-auto py-6">&copy; Puffalytics</p>
+            <ul className="flex justify-center">
+                <Link to="/project">
+                   <li className="px-6">
+                       <p className="text-zinc-800 hover:text-zinc-400">NFT Index</p>
+                   </li>
                 </Link>
-                    <li className="footer-list-item">
-                        <a href="https://twitter.com/PuffalyticsHQ" className="footer-link" target="_blank" rel="noreferrer nofollow">
-                            <i className="fa-brands fa-twitter fa-l footer-twitter-icon"></i>
-                        </a>
-                    </li>
-                </ul>
-                <p className="footer-txt">
-                    * content on this site is for informational purposes only. 
-                    It may contain inaccuracies and should not be taken as financial advice.
-                </p>
-                <p className="footer-txt">
-                    v 2.0.0
-                </p>
-            </div>
+                <li className="px-6">
+                    <a href="https://twitter.com/PuffalyticsHQ" className="text-zinc-800" target="_blank" rel="noreferrer nofollow">
+                        <i className="fa-brands fa-twitter fa-l text-zinc-800"></i>
+                    </a>
+                 </li>
+            </ul>
+            <p className="text-zinc-800 px-2 py-6">
+                * content on this site is for informational purposes only. 
+                It may contain inaccuracies and should not be taken as financial advice. DYOR before purchasing any NFTs.
+            </p>
+            <p className="text-zinc-800 px-2 py-6">
+                v 2.0.1
+            </p>
         </div>
      );
 }

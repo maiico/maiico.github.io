@@ -1,9 +1,8 @@
 import React from 'react';
 import Loading from '../../loading/Loading';
 import HistoricalCharts from './HistoricalCharts/HistoricalCharts';
-import './Market.css';
 
-function Analytics(props) {
+function Market(props) {
 
     // render stat or loading based on stat name
     const renderStat = ((statName, stat) => {
@@ -14,42 +13,42 @@ function Analytics(props) {
             case "floor":
                 statComponent =     
                 // floor price              
-                <div className="project-stat">
-                    <h2 className="project-page-stat-heading">Floor</h2>
-                    <p className="project-page-stat-txt">{props.floorPrice} SOL</p>
-                    <p className="project-page-stat-txt">${(props.floorPrice * props.solPrice).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} USD</p>
+                <div className="flex flex-col justify-center w-full h-[130px] bg-[#0e1111] p-4 mx-auto rounded-lg">
+                    <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">Floor</h2>
+                    <p className="text-slate-200 text-md md:text-lg font-semibold mx-auto py-1">{props.floorPrice} SOL</p>
+                    <p className="text-slate-400 text-sm md:text-md font-normal mx-auto py-1 ">${(props.floorPrice * props.solPrice).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} USD</p>
                 </div>
                 break;
             case "volume":
                 statComponent = 
                 // total volume
-                <div className="project-stat">
-                    <h2 className="project-page-stat-heading">Total Volume</h2>
-                    <p className="project-page-stat-txt">{props.volumeAll.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} SOL</p>
-                    <p className="project-page-stat-txt">${(props.volumeAll * props.solPrice).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} USD</p>
+                <div className="flex flex-col justify-center w-full h-[130px] bg-[#0e1111] p-4 mx-auto rounded-lg">
+                    <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">Total Volume</h2>
+                    <p className="text-slate-200 text-md md:text-lg font-semibold mx-auto py-1">{props.volumeAll.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} SOL</p>
+                    <p className="text-slate-400 text-sm md:text-md font-normal mx-auto py-1 ">${(props.volumeAll * props.solPrice).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} USD</p>
                 </div>
                 break;
             case "salePrice":
                 statComponent = 
                 // avg sale price
-                <div className="project-stat">
-                    <h2 className="project-page-stat-heading">Avg Sale Price</h2>
-                    <p className="project-page-stat-txt">{props.avgPrice24hr.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} SOL</p>
-                    <p className="project-page-stat-txt">${(props.avgPrice24hr * props.solPrice).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} USD</p>
+                <div className="flex flex-col justify-center w-full h-[130px] bg-[#0e1111] p-4 mx-auto rounded-lg">
+                    <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">Avg Sale Price</h2>
+                    <p className="text-slate-200 text-md md:text-lg font-semibold mx-auto py-1">{props.avgPrice24hr.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} SOL</p>
+                    <p className="text-slate-400 text-sm md:text-md font-normal mx-auto py-1 ">${(props.avgPrice24hr * props.solPrice).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} USD</p>
                 </div>
                 break;
             case "totalListed":
                 statComponent =
                 //total listed
-                <div className="project-stat">
-                    <h2 className="project-page-stat-heading">Total Listed</h2>
-                    <p className="project-page-stat-txt">{props.listedCount.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2}) +  " / " + props.collectionCount.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})}</p>
-                    <p className="project-page-stat-txt">{((props.listedCount / props.collectionCount) * 100).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} %</p>
+                <div className="flex flex-col justify-center w-full h-[130px] bg-[#0e1111] p-4 mx-auto rounded-lg">
+                    <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">Total Listed</h2>
+                    <p className="text-slate-200 text-md md:text-lg font-semibold mx-auto py-1">{props.listedCount.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2}) +  " / " + props.collectionCount.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})}</p>
+                    <p className="text-slate-400 text-sm md:text-md font-normal mx-auto py-1 ">{((props.listedCount / props.collectionCount) * 100).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} %</p>
                 </div>
                 break;
             default:
                 statComponent = 
-                    <div className="project-stat">
+                    <div className="flex flex-col justify-center w-full h-[130px] bg-[#0e1111] p-4 mx-auto rounded-lg">
                         <Loading />
                     </div>
 
@@ -57,7 +56,7 @@ function Analytics(props) {
 
         if(stat === 0) {
             statComponent =
-                <div className="project-stat">
+                <div className="flex flex-col justify-center w-full h-[130px] bg-[#0e1111] p-4 mx-auto rounded-lg">
                     <Loading />
                 </div>
         } else {
@@ -68,16 +67,14 @@ function Analytics(props) {
     })
 
     return ( 
-        <div className="market">
-            <div className="project-stats-container">
-                <div className="project-stats-row">
-                    {renderStat("floor", props.floorPrice)}
-                    {renderStat("volume", props.volumeAll)}
-                    {renderStat("salePrice", props.avgPrice24hr)}
-                    {renderStat("totalListed", props.listedCount)}
-                </div>
+        <div className="flex flex-col justify-center w-full bg-black px-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center w-full max-w-7xl mx-auto">
+                {renderStat("floor", props.floorPrice)}
+                {renderStat("volume", props.volumeAll)}
+                {renderStat("salePrice", props.avgPrice24hr)}
+                {renderStat("totalListed", props.listedCount)}
             </div>
-            <div className="historical-charts-container">
+            <div className="flex flex-col justify-center w-full bg-black">
                 <HistoricalCharts 
                     symbol={props.symbol}
                     floorPrice={props.floorPrice}
@@ -89,4 +86,4 @@ function Analytics(props) {
      );
 }
 
-export default Analytics;
+export default Market;

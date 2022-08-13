@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './ProjectPage.css';
 import axios from 'axios';
 import config from '../../Config.json';
 import { useParams } from 'react-router-dom'
@@ -88,7 +87,7 @@ function ProjectPage(props) {
 
 
     return ( 
-        <div className="project-page">
+        <div className="flex flex-col w-full justify-center bg-black py-[125px]">
             <ProjectHeader  
                 name={projectDetails.name}
                 image={projectDetails.image}

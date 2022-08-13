@@ -1,4 +1,3 @@
-import '../FloorPriceChart/CustomToolTipFloor.css';
 import moment from 'moment';
 
 const CustomToolTipListed = props => {
@@ -7,12 +6,12 @@ const CustomToolTipListed = props => {
       return null;
     }
     return (
-      <div className="custom-tooltip-floor">
-        <p className="tooltip-label-floor">
+      <div className="flex flex-col justify-center bg-black p-2 rounded-lg">
+        <p className="text-sm text-slate-500 font-medium">
           <strong>{moment(label).format("ddd, MMM Do YYYY")}</strong>
         </p>
         {payload.map((item, i) => (
-          <p className="tooltip-value-floor" key={i}>
+          <p className="text-sm text-slate-300 font-medium" key={i}>
             Listed: <strong>{item.value}</strong>
           </p>
         ))}

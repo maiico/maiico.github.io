@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import './OwnedApes.css';
 import SAC from '../../../images/sac.png';
 import NAC from '../../../images/nac.png';
-import BestBuds from '../../../images/best-buds.png';
 
 function OwnedApes(props) {
 

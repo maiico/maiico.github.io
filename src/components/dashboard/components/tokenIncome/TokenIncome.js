@@ -1,7 +1,6 @@
 import React from 'react';
 import './TokenIncome.css';
 import Puff from '../../../images/puff-logo.jpeg';
-import All from '../../../images/all-logo.png';
 
 function TokenIncome(props) {
     return ( 

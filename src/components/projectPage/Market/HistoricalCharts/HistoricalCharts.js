@@ -13,7 +13,6 @@ import TimePeriodSelector from './TimePeriodSelector/TimePeriodSelector';
 import PercentChange from './PercentChange/PercentChange';
 import PercentChangeListed from './PercentChange/PercentChangeListed';
 import MeanVolume from './PercentChange/MeanVolume';
-import './HistoricalCharts.css';
 
 function HistoricalCharts(props) {
 
@@ -60,11 +59,10 @@ function HistoricalCharts(props) {
 
 
     return ( 
-        <div className="historical-charts">
-            <div className="historical-charts-row">
-                <div className="historical-chart-container">
-                    <h2 className="historical-charts-heading">Floor</h2>
-                    <div className="chart-header-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-center w-full max-w-7xl mx-auto py-4">
+                <div className="flex flex-col w-full h-[475px] justify-center bg-[#0e1111] rounded-lg p-6">
+                    <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">Floor</h2>
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between pb-4">
                         <TimePeriodSelector 
                             setCurrentView={setCurrentFloorPriceView}
                         />
@@ -83,9 +81,9 @@ function HistoricalCharts(props) {
                         floorPrice30d={MutateFloorChartData(chartData.floorPrice30d, props.floorPrice)}
                     />
                 </div>
-                <div className="historical-chart-container">
-                    <h2 className="historical-charts-heading">Daily Volume</h2>
-                    <div className="chart-header-container">
+                <div className="flex flex-col w-full h-[475px] justify-center bg-[#0e1111] rounded-lg p-6">
+                    <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">Daily Volume</h2>
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between pb-4">
                         <TimePeriodSelector 
                             setCurrentView={setCurrentVolumeDailyView}
                         />
@@ -103,11 +101,9 @@ function HistoricalCharts(props) {
                         volumeDaily30d={MutateVolumeChartData(chartData.volumeDaily30d)}
                     />
                 </div>
-            </div>
-            <div className="historical-charts-row">
-                <div className="historical-chart-container">
-                    <h2 className="historical-charts-heading">Total Listed</h2>
-                    <div className="chart-header-container">
+                <div className="flex flex-col w-full h-[475px] justify-center bg-[#0e1111] rounded-lg p-6">
+                    <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">Total Listed</h2>
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between pb-4">
                         <TimePeriodSelector 
                                 setCurrentView={setCurrentListedCountView}
                         />
@@ -126,9 +122,9 @@ function HistoricalCharts(props) {
                         listedCount30d={MutateListedChartData(chartData.listedCount30d, props.listedCount)}
                     />
                 </div>
-                <div className="historical-chart-container">
-                    <h2 className="historical-charts-heading">Avg Sale Price</h2>
-                    <div className="chart-header-container">
+                <div className="flex flex-col w-full h-[475px] justify-center bg-[#0e1111] rounded-lg p-6">
+                    <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">Avg Sale Price</h2>
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between pb-4">
                         <TimePeriodSelector 
                             setCurrentView={setCurrentAvgSalePriceView}
                         />
@@ -147,7 +143,6 @@ function HistoricalCharts(props) {
                         avgSalePrice30d={MutateAvgSalePriceChartData(chartData.averageSalePrice30d, props.avgPrice24hr)}
                     />
                 </div>
-            </div>
         </div>
      );
 }

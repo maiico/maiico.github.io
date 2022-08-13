@@ -1,5 +1,4 @@
 import React from 'react';
-import './PercentChange.css';
 import LamportsToSol from '../../../../helperFunctions/LamportsToSol';
 
 function MeanVolume(props) {
@@ -37,8 +36,8 @@ function MeanVolume(props) {
 
 
     return ( 
-        <div className="percent-change">
-            <p className="percent-change-txt-green">Avg Daily Vol. {mean.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} SOL</p>
+        <div className="flex flex-row w-[full] mx-auto md:mx-0 my-auto">
+            <p className="text-md md:text-lg text-green-400 font-normal">Avg Daily Vol. {mean.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} SOL</p>
         </div>
      );
 }

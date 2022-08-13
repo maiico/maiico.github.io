@@ -1,5 +1,4 @@
 import React from 'react';
-import './PercentChange.css';
 
 function PercentChangeListed(props) {
 
@@ -31,28 +30,28 @@ function PercentChangeListed(props) {
 
     const renderDifference = ((difference) => {
         if(difference >= 0) {
-            return <p className="percent-change-txt-red">+{difference.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} listings</p>
+            return <p className="text-md md:text-lg text-red-400 font-normal">+{difference.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 1})} listings</p>
         } if(difference < 0) {
-            return <p className="percent-change-txt-green">{difference.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} listings</p>
+            return <p className="text-md md:text-lg text-green-400 font-normal">{difference.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 1 })} listings</p>
         } else {
-            return <p className="percent-change-txt">-</p>
+            return <p className="text-md md:text-lg text-slate-400 font-normal">-</p>
         }
     })
 
     const  renderPercentChange = ((percentChange) => {
         if(percentChange >= 0) {
-            return <p className="percent-change-txt-red">(+{percentChange.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} %)</p>
+            return <p className="text-md md:text-lg text-red-400 font-normal">&nbsp;(+{percentChange.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} %)</p>
         } if(percentChange < 0) {
-            return <p className="percent-change-txt-green">({percentChange.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} %)</p>
+            return <p className="text-md md:text-lg text-green-400 font-normal">&nbsp;({percentChange.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} %)</p>
         } else {
-            return <p className="percent-change-txt">-</p>
+            return <p className="text-md md:text-lg text-slate-400 font-normal">-</p>
         }
     })
 
 
 
     return ( 
-        <div className="percent-change">
+        <div className="flex flex-row w-[full] mx-auto md:mx-0 my-auto">
             {renderDifference(difference)}
             {renderPercentChange(percentChange)}
         </div>

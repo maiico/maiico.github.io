@@ -1,11 +1,10 @@
 import React from 'react';
-import './Insights.css';
 import ProjectAnalysis from './ProjectAnalysis/ProjectAnalysis';
 
 function Insights(props) {
     return ( 
-        <div className="insights">
-            <div className="insights-row">
+        <div className="flex flex-col justify-center w-full bg-black px-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-7xl mx-auto pb-4">
                 <ProjectAnalysis 
                     heading={"Artwork"}
                     content={props.artTxt}
@@ -22,7 +21,7 @@ function Insights(props) {
                     score={props.teamScore}
                 />
             </div>
-            <div className="insights-row">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-7xl mx-auto pb-4">
                 <ProjectAnalysis 
                     heading={"Community"}
                     content={props.communityTxt}

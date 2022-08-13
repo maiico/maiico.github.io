@@ -5,8 +5,6 @@ import axios from 'axios';
 import PuffPrice from './components/puffPrice/PuffPrice';
 import TokenIncome from './components/tokenIncome/TokenIncome';
 import OwnedApes from './components/ownedApes/OwnedApes';
-import Floor from './components/floor/Floor';
-import Defi from './components/defi/Defi';
 
 function Dashboard() {
 

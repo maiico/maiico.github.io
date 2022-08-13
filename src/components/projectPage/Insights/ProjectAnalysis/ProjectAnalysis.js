@@ -1,5 +1,4 @@
 import React from 'react';
-import './ProjectAnalysis.css';
 import RenderPuffScore from '../../../helperFunctions/RenderPuffScore';
 import Loading from '../../../loading/Loading';
 
@@ -10,25 +9,25 @@ function ProjectAnalysis(props) {
 
     switch(props.heading) {
         case "Artwork":
-            categoryIcon = <i className="fa-solid fa-palette fa-xl analysis-icon"></i>
+            categoryIcon = <i className="fa-solid fa-palette fa-xl text-slate-400 mx-auto py-4"></i>
             break;
         case "Tokenomics":
-            categoryIcon = <i className="fa-solid fa-coins fa-xl analysis-icon"></i>
+            categoryIcon = <i className="fa-solid fa-coins fa-xl text-slate-400 mx-auto py-4"></i>
             break;
         case "Team":
-            categoryIcon = <i className="fa-solid fa-users-line fa-xl analysis-icon"></i>
+            categoryIcon = <i className="fa-solid fa-users-line fa-xl text-slate-400 mx-auto py-4"></i>
             break;
         case "Community":
-            categoryIcon = <i className="fa-solid fa-handshake-simple fa-xl analysis-icon"></i>
+            categoryIcon = <i className="fa-solid fa-handshake-simple fa-xl text-slate-400 mx-auto py-4"></i>
             break;
         case "Utility":
-            categoryIcon = <i className="fa-solid fa-screwdriver-wrench fa-xl analysis-icon"></i>
+            categoryIcon = <i className="fa-solid fa-screwdriver-wrench fa-xl text-slate-400 mx-auto py-4"></i>
             break;
         case "Insights":
-            categoryIcon = <i className="fa-solid fa-comment-dots fa-xl analysis-icon"></i>
+            categoryIcon = <i className="fa-solid fa-comment-dots fa-xl text-slate-400 mx-auto py-4"></i>
             break;
         default:
-            categoryIcon = <i className="fa-solid fa-face-sad-cry fa-xl analysis-icon"></i>
+            categoryIcon = <i className="fa-solid fa-face-sad-cry fa-xl text-slate-400 mx-auto py-4"></i>
             break;
     }
 
@@ -38,28 +37,28 @@ function ProjectAnalysis(props) {
     if(props.content.constructor === Array) {
         
        content =  props.content.map((utility, i) => {
-            return <li className="project-analysis-list" key={i}>{utility}</li>
+            return <li className="ext-md text-slate-400 font-normal text-center list-none" key={i}>{utility}</li>
         })
 
     } else {
-        content =  <p className="project-analysis-txt">{props.content}</p>
+        content =  <p className="text-md text-slate-400 font-normal">{props.content}</p>
     }
 
     if(props.content === "loading") {
         return (
-            <div className="project-analysis">
+            <div className="flex flex-col justify-center w-full bg-[#0e1111] rounded-lg mx-auto p-4">
                 {categoryIcon}
-                <h2 className="project-analysis-heading">{props.heading}</h2>
+                <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">{props.heading}</h2>
                 <Loading />
             </div>
         )
     } else {
         return ( 
-            <div className="project-analysis">
+            <div className="flex flex-col w-full bg-[#0e1111] rounded-lg mx-auto p-4">
                 {categoryIcon}
-                <h2 className="project-analysis-heading">{props.heading}</h2>
-                <div className="analysis-puff-score-container">
-                    <p className="puffalytics-score-txt">Score {props.score}/5</p>
+                <h2 className="text-transparent bg-clip-text bg-gradient-to-l from-[#12c2e9] to-[#c471ed] text-md md:text-lg font-medium mx-auto py-1">{props.heading}</h2>
+                <div className="flex flex-col justify-center w-full mx-auto py-1">
+                    <p className="text-md md:text-lg text-green-400 font-semibold mx-auto pb-2">Score {props.score}/5</p>
                     {RenderPuffScore(props.score)}
                 </div>
                 {content}

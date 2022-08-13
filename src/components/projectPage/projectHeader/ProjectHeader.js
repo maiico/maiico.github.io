@@ -1,36 +1,27 @@
 import React from 'react';
-import './ProjectHeader.css';
 import RenderPuffScore from '../../helperFunctions/RenderPuffScore';
 import RenderAnalyst from '../../helperFunctions/RenderAnalyst';
 
 function ProjectHeader(props) {
     return ( 
-        <div className="project-header">
-            <img src={props.image} className="project-header-img" alt={props.name}></img>
-                <div className="project-heading-container">
-                    <h1 className="project-header-heading">{props.name}</h1>
-                    <div className="puff-score-container">
-                        <p className="puff-score-label">Puffalytics Score ({props.overallScore}/5)  </p>
-                        {RenderPuffScore(props.overallScore)}
-                    </div>
-                </div>
-                <div className="project-description-container">
-                    <p className="project-header-txt">{props.description}</p>
-                </div>
-                <div className="links-analyst-container">
-                    <div className="project-links-container">
-                        <a href={props.twitter} target="_blank" rel="noreferrer nofollow" className="anchor-tag">
+        <div className="flex flex-col w-full max-w-[800px] justify-center mx-auto p-2 border-b-2 border-solid border-neutral-800">
+            <img src={props.image} className="w-[120px] mx-auto mb-2 rounded-full " alt={props.name}></img>
+            <h1 className="text-center text-slate-200 text-2xl md:text-3xl font-bold py-2">{props.name}</h1>
+            <p className="text-center text-green-400 text-l md:text-xl font-normal py-2">Puffalytics Score ({props.overallScore}/5)  </p>
+                {RenderPuffScore(props.overallScore)}
+            <p className="text-center text-slate-300 text-sm md:text-lg font-medium py-2">{props.description}</p>
+                <div className="flex w-full max-w-[280px] justify-between mx-auto py-2">
+                        <a href={props.twitter} target="_blank" rel="noreferrer nofollow" className="text-slate-400 mx-auto my-auto">
                             <i className="fa-brands fa-twitter fa-xl"></i>
                         </a>
-                        <a href={props.discord} target="_blank" rel="noreferrer nofollow" className="anchor-tag">
+                        <a href={props.discord} target="_blank" rel="noreferrer nofollow" className="text-slate-400 mx-auto my-auto">
                             <i className="fa-brands fa-discord fa-xl"></i>
                         </a>
-                        <a href={props.website} target="_blank" rel="noreferrer nofollow" className="anchor-tag">
+                        <a href={props.website} target="_blank" rel="noreferrer nofollow" className="text-slate-400 mx-auto my-auto">
                             <i className="fa-solid fa-globe fa-xl"></i>
                         </a>
-                    </div>
-                    <p className="project-header-txt">Analyst:</p>
-                    <div className="analyst-container">
+                    <p className="text-slate-400 text-sm md:text-lg font-medium my-auto px-2">Analyst:</p>
+                    <div className="flex justify-center px-2">
                         {RenderAnalyst(props.analyst)}
                     </div>
                 </div>
